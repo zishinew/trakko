@@ -1,0 +1,2 @@
+-- Asset-aware seeding is implemented in scripts/seed.ts. Run npm run seed after
+-- applying migrations; it creates a confirmed test producer and uploads fixtures.
