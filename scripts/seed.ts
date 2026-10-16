@@ -11,12 +11,12 @@ try {
 }
 async function seed() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL,
-    key = process.env.SUPABASE_SERVICE_ROLE_KEY,
+    key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY,
     email = process.env.SEED_EMAIL,
     password = process.env.SEED_PASSWORD;
   if (!url || !key || !email || !password || password.length < 10)
     throw new Error(
-      'Set Supabase URL, service-role key, SEED_EMAIL, and a SEED_PASSWORD of at least 10 characters. Use a test project.',
+      'Set Supabase URL, server secret key, SEED_EMAIL, and a SEED_PASSWORD of at least 10 characters. Use a test project.',
     );
   const db = createClient<Database>(url, key, {
     auth: { persistSession: false, autoRefreshToken: false },
@@ -96,20 +96,18 @@ async function seed() {
         bytes,
         kind === 'mp3' ? 'audio/mpeg' : kind === 'wav' ? 'audio/wav' : 'application/zip',
       );
-      const { error: e } = await db
-        .from('beat_files')
-        .upsert(
-          {
-            id: randomUUID(),
-            beat_id: beat.id,
-            store_id: data.store.id,
-            kind,
-            path,
-            name: `${beat.title.replaceAll(' ', '-')}.${extension}`,
-            size: bytes.length,
-          },
-          { onConflict: 'beat_id,kind' },
-        );
+      const { error: e } = await db.from('beat_files').upsert(
+        {
+          id: randomUUID(),
+          beat_id: beat.id,
+          store_id: data.store.id,
+          kind,
+          path,
+          name: `${beat.title.replaceAll(' ', '-')}.${extension}`,
+          size: bytes.length,
+        },
+        { onConflict: 'beat_id,kind' },
+      );
       if (e) throw e;
     }
   }

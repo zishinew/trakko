@@ -29,11 +29,9 @@ export async function supabaseServer() {
   );
 }
 export function supabaseAdmin() {
-  if (!process.env.SUPABASE_SERVICE_ROLE_KEY)
-    throw new Error('Supabase service role is not configured');
-  return createClient<Database>(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY,
-    { auth: { persistSession: false, autoRefreshToken: false } },
-  );
+  const secretKey = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!secretKey) throw new Error('Supabase server secret key is not configured');
+  return createClient<Database>(process.env.NEXT_PUBLIC_SUPABASE_URL!, secretKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
 }

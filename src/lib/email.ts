@@ -2,7 +2,10 @@ import 'server-only';
 import { supabaseAdmin } from './supabase/server';
 import { sealReceipt, openReceipt, sendReceipt } from './receipt-email';
 function secret() {
-  const value = process.env.EMAIL_ENCRYPTION_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const value =
+    process.env.EMAIL_ENCRYPTION_KEY ||
+    process.env.SUPABASE_SERVICE_ROLE_KEY ||
+    process.env.SUPABASE_SECRET_KEY;
   if (!value) throw new Error('Configure an email encryption key');
   return value;
 }

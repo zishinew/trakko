@@ -247,3 +247,9 @@ The marketing page uses an original, dependency-free WebGL interference shader i
 
 The user-selected reference is [guns.lol](https://guns.lol/), simplified into charcoal, white, and muted gray. Variable Inter is self-hosted from the official [google/fonts Inter source](https://github.com/google/fonts/tree/main/ofl/inter), with its SIL Open Font License in `src/app/fonts/Inter-OFL.txt`. This replaces condensed release lettering and green marketing fields. The background is now subdued grayscale; pause, offscreen stopping, and reduced-motion behavior remain. Working screens use neutral light surfaces, and producer theme customization remains owned by each producer.
 # trakko
+
+### Supabase server credentials
+
+Use `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` for the project connection. Put the current `sb_secret_...` server key in `SUPABASE_SECRET_KEY` inside ignored `.env.local` (and your deployment environment). `SUPABASE_SERVICE_ROLE_KEY` remains a compatibility fallback. Neither server key is public. Set a dedicated, stable `EMAIL_ENCRYPTION_KEY` before accepting payments so rotating database credentials does not invalidate queued receipt links. Existing installations continue using their legacy receipt encryption fallback when both server credentials are present.
+
+The preview at port 3001 needs `APP_URL=http://localhost:3001` and matching Supabase Auth redirect URLs for `/auth/callback`, `/auth/callback?next=/onboarding`, and `/auth/callback?next=/update-password`. Keep the production redirect allowlist specific to the production origin. Do not apply Trakko migrations to a database serving another app without confirming that it is the intended target.
