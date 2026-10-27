@@ -38,7 +38,7 @@ Choose a fresh test project or run the local stack. Never point a development se
 
 ### Hosted test project
 
-Create a project in Supabase and copy the project URL, publishable key, and server service-role key into `.env.local`.
+Create a project in Supabase and copy the project URL, publishable key, and server secret key into `.env.local` (`SUPABASE_SERVICE_ROLE_KEY` remains a legacy fallback).
 
 ```sh
 npx supabase login
@@ -48,6 +48,16 @@ npx supabase db push
 ```
 
 Alternatively, run the migration SQL in Supabase's SQL editor on a fresh project. The migration in `supabase/migrations/` is authoritative. Do not reapply it to a migrated project.
+
+### Trakko cloud project
+
+Trakko uses project `ekulqhopoqdvkcvhaysb` in the `trakko` organization (US East / Ohio), at `https://ekulqhopoqdvkcvhaysb.supabase.co`. The empty project was initialized through the Supabase plugin with the four committed migrations. Their filenames match the recorded remote migration versions, so future CLI pushes do not reapply the initial schema. The RLS test reads every migration in filename order.
+
+All 14 application tables have RLS enabled. `preview-assets` is public for previews/artwork; `beat-deliverables` is private and served through authorized signed URLs. `upload_intents` deliberately has no client policies: only the server may allocate uploads. The setup migration revokes client execution of Supabase's optional `rls_auto_enable` helper and adds covering foreign-key indexes. New database stores default to the light theme and blue accent; existing preferences are retained.
+
+The local app origin and Auth Site URL are `http://localhost:3000`; the three exact callbacks below are allowlisted. Email/password signup is enabled. No wildcard callbacks, seeded producer accounts, or payment credentials are added by this setup. Configure production SMTP and production HTTPS callbacks before public launch.
+
+Local credentials live only in ignored `.env.local`, with owner-only file permissions. Public URL/key configuration disables demo mode. Set `SUPABASE_SECRET_KEY` from the project's existing secret keys to enable server-side storage, analytics, and fulfillment; the plugin exposes publishable keys only. A dedicated receipt encryption key is generated locally and must remain stable. Never commit this file or copy its contents into issue reports.
 
 ### Local stack
 
@@ -162,7 +172,7 @@ The interface follows the user-supplied Geniestudio daylight reference: sky-blue
 
 Copy your store link or iframe code from **Store → Share your store**. The public `/:username/embed` route supports listening and search; purchase buttons open the matching beat in the full secure storefront in a new tab. Only this public route permits framing; dashboards, authentication, receipts, and the full store refuse embedding.
 
-Apply both migrations in `supabase/migrations/` in order. `store_tools` holds producer-owned promotion, bundle, and collaborator settings; contacts, source events, and receipt jobs have separate private tables. The migration extends beats with release times/free-download terms and orders with immutable item and collaborator snapshots. PostgreSQL tests verify the new RLS rules and receipt queue transaction.
+Apply all migrations in `supabase/migrations/` in filename order. `store_tools` holds producer-owned promotion, bundle, and collaborator settings; contacts, source events, and receipt jobs have separate private tables. The migration extends beats with release times/free-download terms and orders with immutable item and collaborator snapshots. PostgreSQL tests verify the new RLS rules and receipt queue transaction.
 
 - **Promotions:** `/dashboard/promotions` creates percentage codes with optional expiry, pause/activation, and removal. Codes apply to individual beats and bundles. Quote and checkout validate them server-side; only one code applies per purchase.
 - **Bundles:** curated beat sets have a fixed price and common license name. All included beats must be live and have complete active licenses. Discounts and platform fees are allocated across items with integer arithmetic; every beat’s license, files, and collaborator shares are preserved. Receipt links download each included file individually.
@@ -202,7 +212,7 @@ TEST_BASE_URL=http://localhost:3001 npm run test:e2e
 
 `npm test` covers money boundaries, file entitlements, upload/path restrictions, migration execution, RLS isolation between two producers, public/private Storage policies, ownership reassignment, cross-store foreign keys, and atomic/idempotent settlement. Database tests execute actual PostgreSQL SQL through PGlite, with minimal Auth/Storage schema stubs. They do not substitute for a deployed Supabase Storage/Auth integration test.
 
-The project was verified with lint, strict TypeScript, business/database tests, browser demo tests, and a production build. Hosted Supabase auth, signed uploads, and a live Stripe test-mode payment still need to be exercised with your credentials. Docker was unavailable during implementation; no remote database or Stripe account was modified.
+The project was verified with lint, strict TypeScript, business/database tests, browser demo tests, and a production build. Hosted Supabase configuration is recorded below. The local PostgreSQL suite verifies the full migration chain and producer isolation; a live Stripe test-mode payment still requires Stripe credentials and a connected test account.
 
 `npm audit --omit=dev` reports no production dependency advisories. The Next.js ESLint toolchain currently brings an unpatched `braces` denial-of-service advisory through `fast-glob`; it affects development lint glob processing, not the deployed app. Keep the lockfile and review upstream fixes rather than downgrading the Next.js runtime to satisfy the audit suggestion.
 

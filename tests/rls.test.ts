@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { PGlite } from '@electric-sql/pglite';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 const alice = 'a0000000-0000-4000-8000-000000000001',
   bob = 'b0000000-0000-4000-8000-000000000001';
 const sa = 'a1000000-0000-4000-8000-000000000001',
@@ -20,8 +20,11 @@ test('migration, RLS ownership, private data, and atomic webhook fulfillment in 
  grant usage on schema storage to anon,authenticated,service_role;grant all on storage.objects to anon,authenticated,service_role;
  create policy existing_broad_policy on storage.objects for all to anon,authenticated using(true) with check(true);
  insert into storage.objects values('preview-assets','preview.mp3'),('beat-deliverables','private.mp3');`);
-  await db.exec(await readFile('supabase/migrations/20261007004543_initial_beatstore.sql', 'utf8'));
-  await db.exec(await readFile('supabase/migrations/20261007190020_producer_tools.sql', 'utf8'));
+  for (const migration of (await readdir('supabase/migrations'))
+    .filter((name) => name.endsWith('.sql'))
+    .sort()) {
+    await db.exec(await readFile(`supabase/migrations/${migration}`, 'utf8'));
+  }
   await db.exec(`insert into auth.users values('${alice}'),('${bob}');
  insert into public.stores(id,owner_id,username,display_name) values('${sa}','${alice}','alice','Alice'),('${sb}','${bob}','bob','Bob');
  insert into public.beats(id,store_id,title,bpm,published) values('${ba}','${sa}','Public',140,true),('${bb}','${sb}','Private',120,false);
