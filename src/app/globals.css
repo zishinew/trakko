@@ -3743,6 +3743,7 @@ legend {
   --mint-strong: #d4d4dc;
   --paper: #fcfcfd;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
   --shadow-overlay: 0 24px 80px #20202430;
 }
@@ -7315,5 +7316,223 @@ select {
   .signal-play {
     transform: none !important;
     transition: none;
+  }
+}
+
+/* Daylight sound fields: GPU ribbons and ripples with one shared motion control. */
+.daylight-hero,
+.daylight-catalog .label-pricing {
+  position: relative;
+  isolation: isolate;
+}
+.daylight-hero {
+  background:
+    radial-gradient(ellipse at 20% 60%, #dfddff88, transparent 62%),
+    radial-gradient(ellipse at 80% 65%, #c4e2ff88, transparent 62%);
+}
+.daylight-shader {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+}
+.daylight-shader[data-render-state='fallback'] {
+  visibility: hidden;
+}
+.daylight-catalog .label-pricing {
+  overflow: hidden;
+}
+.daylight-catalog .label-pricing > div {
+  position: relative;
+}
+.effects-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 9999px;
+  font-size: 12px;
+  box-shadow: 0 6px 22px #21477512;
+  cursor: pointer;
+}
+.effects-control:disabled {
+  cursor: default;
+  opacity: 0.75;
+}
+.signal-drift {
+  position: relative;
+  width: min(570px, 76%);
+  z-index: 2;
+  animation: listening-float 6s var(--ease-in-out) infinite;
+}
+.signal-drift .signal-console {
+  width: 100%;
+}
+.signal-stage::before,
+.signal-stage::after {
+  content: '';
+  position: absolute;
+  width: min(720px, 98%);
+  height: 210px;
+  border: 1px solid #719bda40;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: listening-orbit 9s linear infinite;
+}
+.signal-stage::after {
+  animation-delay: -4.5s;
+}
+@keyframes listening-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes listening-orbit {
+  0% {
+    transform: rotateX(58deg) rotateZ(-9deg) scale(0.8);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotateX(58deg) rotateZ(9deg) scale(1.2);
+    opacity: 0;
+  }
+}
+.daylight-motion[data-effects-paused='true'] .signal-drift,
+.daylight-motion[data-page-hidden='true'] .signal-drift,
+.daylight-motion [data-in-view='false'] .signal-drift,
+.daylight-motion[data-effects-paused='true'] .signal-stage::before,
+.daylight-motion[data-effects-paused='true'] .signal-stage::after,
+.daylight-motion[data-page-hidden='true'] .signal-stage::before,
+.daylight-motion[data-page-hidden='true'] .signal-stage::after,
+.daylight-motion [data-in-view='false'] .signal-stage::before,
+.daylight-motion [data-in-view='false'] .signal-stage::after {
+  animation-play-state: paused;
+}
+.daylight-motion[data-effects-paused='true'] .signal-console {
+  transform: none !important;
+}
+.daylight-motion[data-effects-paused='true'] .signal-paper {
+  transition: none;
+}
+.daylight-motion[data-effects-paused='true'] .title-line > span {
+  animation: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .daylight-catalog .release-tile {
+    transition: transform 250ms var(--ease-out);
+  }
+  .daylight-catalog .release-tile:hover {
+    transform: translateY(-8px);
+  }
+  .daylight-catalog .release-tile:focus-within {
+    transform: none;
+  }
+  .daylight-catalog .landing-steps svg {
+    transition: transform 220ms var(--ease-out);
+  }
+  .daylight-catalog .landing-steps > div:hover svg {
+    transform: translateY(-4px) rotate(-8deg);
+  }
+  .daylight-catalog .button svg {
+    transition: transform 150ms var(--ease-out);
+  }
+  .daylight-catalog .button:hover svg {
+    transform: translateX(3px);
+  }
+  .daylight-motion[data-effects-paused='true'] .release-tile,
+  .daylight-motion[data-effects-paused='true'] .landing-steps svg,
+  .daylight-motion[data-effects-paused='true'] .button svg {
+    transform: none;
+  }
+}
+@media (max-width: 760px) {
+  .signal-drift {
+    width: calc(100% - 24px);
+  }
+  .effects-control {
+    padding: 0;
+    min-width: 44px;
+    font-size: 11px;
+  }
+  .effects-control span {
+    display: none;
+  }
+  .signal-stage::before,
+  .signal-stage::after {
+    height: 180px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signal-drift,
+  .signal-stage::before,
+  .signal-stage::after {
+    animation: none;
+  }
+  .daylight-catalog .release-tile,
+  .daylight-catalog .landing-steps svg,
+  .daylight-catalog .button svg {
+    transform: none !important;
+    transition: none;
+  }
+}
+.signal-playground:focus-within .signal-drift {
+  animation-play-state: paused;
+}
+.daylight-motion[data-effects-paused='true'] .signal-paper {
+  transform: none !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .signal-stage:hover .signal-drift {
+    animation-play-state: paused;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .signal-drift {
+    animation: none;
+  }
+}
+@media (max-width: 760px) {
+  .daylight-catalog .landing-nav {
+    height: auto;
+    min-height: 76px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    padding-block: 12px;
+  }
+  .daylight-catalog .landing-nav .logo {
+    flex-shrink: 0;
+  }
+  .daylight-catalog .landing-nav nav {
+    flex-shrink: 0;
+    gap: 6px;
+  }
+  .daylight-catalog .landing-nav nav > a[href='/login'] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    white-space: nowrap;
+  }
+  .daylight-catalog .landing-nav nav > .button {
+    padding-inline: 12px;
+    min-height: 44px;
+    white-space: nowrap;
   }
 }

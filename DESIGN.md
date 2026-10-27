@@ -244,7 +244,7 @@ Paper cards are flat, generous, and usually borderless. Marketing explanation us
 
 Release cards show real cover artwork, title, BPM/key, an actual preview control, and starting license price from workspace data. Artwork has a 24px crop radius and 1.2 aspect ratio on the homepage. The 48px white circular play control becomes powder blue when active. Price links use a quiet blue-tinted pill and at least 44px height. Preserve one persistent player across previews; never autoplay audio. The sidecar's isolated playback sample depicts the control only; the app owns audio state.
 
-Fine-pointer artwork hover scales to 1.035 over 500ms; catalog artwork uses the existing 300ms transition. The homepage headline has one bounded 650ms entrance with an 80ms second-line delay. Working control feedback stays brief (120–150ms), the player enters in 220ms, and the drawer uses its established easing. Reduced motion removes headline choreography and decorative artwork transitions. There is no runtime shader or looping illustration motion.
+Fine-pointer artwork hover scales to 1.035 over 500ms; catalog artwork uses the existing 300ms transition. The homepage headline has one bounded 650ms entrance with an 80ms second-line delay. Working control feedback stays brief (120–150ms), the player enters in 220ms, and the drawer uses its established easing. Reduced motion removes headline choreography and decorative artwork transitions. Two original WebGL fields now provide a flowing hero ribbon and a pricing ripple; no generated image is used.
 
 ### Interactive listening room
 
@@ -253,6 +253,14 @@ Fine-pointer artwork hover scales to 1.035 over 500ms; catalog artwork uses the 
 The console uses the shared player, three real demo tracks, and 64 RMS waveform samples per track derived from the corresponding MP3. A native range input provides keyboard and pointer seeking. Track buttons expose their selection with aria-pressed. Selecting a track during playback switches audio; otherwise it changes the selected preview without autoplay.
 
 Fine-pointer movement tilts the console by at most 3 degrees per axis, with a 200ms ease-out transform transition; pastel papers fan on hover over 300ms. Keyboard focus flattens the console immediately. Reduced motion disables spatial movement, and touch keeps the static stack. Main controls are 44px or larger. Initial navigation and the readable hero remain server-rendered; the loading fallback is scoped to the dashboard so it cannot hide the homepage without JavaScript.
+
+### Daylight shaders and motion control
+
+`DaylightMotion` coordinates the navigation pause/resume control and reduced-motion preference. `DaylightShader` draws original GLSL in two variants: blue/lavender flow behind the hero and blue ripple rings behind pricing. Pointer input deforms the flow; audio playback raises its energy (a playback-state effect, not live frequency analysis).
+
+Each canvas caps drawing at 30fps, device pixel ratio at 1.25, and backing width at 1280px. Intersection and page visibility stop frame scheduling; paused elapsed time resumes without a jump. Reduced motion renders a single still frame. Failed WebGL compilation, unavailable WebGL, or context loss leaves the static CSS field. Buffers, shaders, observers, and event handlers are cleaned up on unmount. Device performance still needs a physical-phone check.
+
+The console floats by 12px over a six-second cycle and is surrounded by nine-second orbit lines. Hover intent, keyboard focus, pause, hidden tabs, and offscreen regions hold the float; touch/coarse-pointer mode removes it. Reduced motion removes spatial loops. Track changes use a 220ms transform/opacity transition for pointer clicks and remain immediate for keyboard activation. Release-card hover lifts by 8px over 250ms, workflow icons move by 4px over 220ms, and CTA arrows nudge by 3px over 150ms. The shared pause control never stops audio or its meaningful progress updates.
 
 ## Do's and Don'ts
 

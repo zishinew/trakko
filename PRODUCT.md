@@ -36,3 +36,7 @@ The user explicitly requested removing the remaining green color scheme. Use neu
 
 ## Current visual direction — October 26, 2026
 The user supplied the Geniestudio style reference and confirmed applying it across Trakko. This supersedes the dark guns.lol treatment and slanted browser-window hero. Preserve all features, Trakko branding, customizable producer links, 8% fee, and producer-owned storefront settings. Use a pale sky-blue canvas, paper-white surfaces, medium-weight Inter as the supplied Aeonik/Geist substitute, rounded cards and pill controls, generous margins, dark charcoal actions, and a functional listening-room hero without AI-generated images. Keep the previous no-green preference: lavender/peach/powder-blue pastels replace mint.
+
+
+## Motion steer — October 27, 2026
+The user explicitly requested more animations, shaders, and dynamism. Preserve daylight branding and the no-generated-image preference. Add code-native flow/ripple fields and stronger listening-room motion, with pause, reduced motion, bounded rendering, and dependable music controls.

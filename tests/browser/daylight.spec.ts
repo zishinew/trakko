@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test('the listening room plays, seeks and switches real previews', async ({ page }) => {
   await page.goto('/');
+  await page.locator('.signal-stage').hover();
   await page.getByRole('button', { name: 'Play hero preview: eyesight', exact: true }).click();
   await expect(
     page.getByRole('button', { name: 'Pause hero preview: eyesight', exact: true }),
@@ -40,6 +41,7 @@ test('reduced motion retains a static, readable daylight hero', async ({ page })
   expect(
     await page.locator('.signal-console').evaluate((el) => getComputedStyle(el).transform),
   ).toBe('none');
+  await page.locator('.signal-stage').hover();
   await page.getByRole('button', { name: 'Play hero preview: eyesight', exact: true }).click();
   await expect(
     page.getByRole('button', { name: 'Pause hero preview: eyesight', exact: true }),

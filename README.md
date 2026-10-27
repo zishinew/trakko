@@ -255,6 +255,12 @@ Variable Inter is self-hosted from the official [google/fonts Inter source](http
 
 The hero uses an original React/CSS listening room with shared preview playback, keyboard-accessible seeking, precomputed RMS waveforms, pointer depth, and fanned pastel paper layers. It replaces the generated headphone illustration; the PNG and its sidecar are removed. Interaction references: [Aceternity 3D Card](https://ui.aceternity.com/components/3d-card-effect), [Componentry Orbit Card Stack](https://componentry.dev/docs/components/orbit-card-stack), and [21st.dev WaveformPlayer](https://21st.dev/@ruixen.ui/components/waveform-player). These are researched interaction references, not copied source or installed packages. Pointer effects are limited to fine pointers, keyboard focus flattens the console, and reduced motion removes spatial effects.
 
+### Dynamic daylight effects
+
+The homepage includes original WebGL flow and ripple shaders, cursor distortion, and playback-state energy. The listening console floats when idle, settles on hover/focus, and animates pointer-driven track changes. Release cards, workflow icons, and CTA arrows have bounded hover feedback. The navigation pause control stops decorative effects while music remains usable.
+
+Shader rendering is capped at 30fps with bounded resolution; hidden/offscreen canvases stop scheduling frames. Reduced motion uses a static shader frame and removes spatial loops. WebGL failure/context loss falls back to the static daylight field. Seven focused browser checks cover shader startup, shared pause/resume, offscreen suspension, reduced motion, WebGL failure, playback/seeking, and navigation without JavaScript. Browser checks do not certify physical-device GPU performance.
+
 ### Supabase server credentials
 
 Use `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` for the project connection. Put the current `sb_secret_...` server key in `SUPABASE_SECRET_KEY` inside ignored `.env.local` (and your deployment environment). `SUPABASE_SERVICE_ROLE_KEY` remains a compatibility fallback. Neither server key is public. Set a dedicated, stable `EMAIL_ENCRYPTION_KEY` before accepting payments so rotating database credentials does not invalidate queued receipt links. Existing installations continue using their legacy receipt encryption fallback when both server credentials are present.
