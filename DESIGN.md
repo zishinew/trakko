@@ -149,14 +149,14 @@ components:
 
 Trakko feels like a generous daylight studio: pale sky surrounds paper surfaces, near-black type sets the hierarchy, and charcoal pill actions give the interface a clear point of emphasis. Medium-weight, regular-width Inter connects expressive marketing with practical producer tools. Soft lavender, peach, and powder-blue washes add warmth without competing with music.
 
-The user-supplied Geniestudio reference governs this system across marketing, dashboard, authentication, and the default light storefront. Trakko adapts it with locally served Inter in place of Aeonik/Geist, an original transparent music illustration, real playable demo releases, and lavender/peach/powder-blue instead of mint. Producer-selected dark themes and custom accents retain their own surface and contrast tokens.
+The user-supplied Geniestudio reference governs this system across marketing, dashboard, authentication, and the default light storefront. Trakko adapts it with locally served Inter in place of Aeonik/Geist, an interactive paper-stack listening room, real playable demo releases, and lavender/peach/powder-blue instead of mint. Producer-selected dark themes and custom accents retain their own surface and contrast tokens.
 
 **Key Characteristics:**
 
 - Pale sky canvas and paper cards with tonal, mostly flat depth.
 - Regular-width Inter at weight 500 for display and principal headings.
 - Generous rounded cards, pill actions, and clearly labeled native fields.
-- Original soft 3D music imagery alongside genuine release artwork and playback.
+- A functional listening room with measured audio waveforms, paper depth, and genuine release playback.
 - Producer-owned storefront themes, readable task screens, and explicit demo states.
 
 The current implementation is documented from the final daylight block in `src/app/globals.css`, `src/app/layout.tsx`, `src/components/landing.tsx`, and `src/components/release-showcase.tsx`, with desktop, tablet, phone, dashboard, storefront (including dark), and authentication captures under `.impeccable/review/daylight-*.png`. The final current-direction block in `.impeccable/surfaces/src-components-landing-tsx.md` carries homepage strategy; older direction blocks are historical.
@@ -203,7 +203,7 @@ Workspace navigation remains 236px wide on desktop and uses its existing mobile 
 
 ## Elevation & Depth
 
-Tone and silhouette provide the primary depth: paper sits on sky; pastel groups sit among paper panels. Ordinary content panels and authentication cards have no shadow. Overlay and player shadows remain functional exceptions; the rendered illustration carries its own self-shadowing and needs no rectangular backing plate.
+Tone and silhouette provide the primary depth: paper sits on sky; pastel groups sit among paper panels. Ordinary content panels and authentication cards have no shadow. Overlay and player shadows remain functional exceptions; the interactive listening console uses a single soft offset shadow to separate it from the fanned pastel papers.
 
 - **Primary control:** `0 1px 2px #0a0d121f` gives the dark action a restrained edge. This is lighter than the reference's heavy ring.
 - **Overlay:** `0 24px 80px #04459018` is the current cool, diffuse modal depth token.
@@ -246,9 +246,13 @@ Release cards show real cover artwork, title, BPM/key, an actual preview control
 
 Fine-pointer artwork hover scales to 1.035 over 500ms; catalog artwork uses the existing 300ms transition. The homepage headline has one bounded 650ms entrance with an 80ms second-line delay. Working control feedback stays brief (120–150ms), the player enters in 220ms, and the drawer uses its established easing. Reduced motion removes headline choreography and decorative artwork transitions. There is no runtime shader or looping illustration motion.
 
-### Original music illustration
+### Interactive listening room
 
-`public/images/daylight-music.png` is the transparent original 3D headphone/cassette/cloud artwork generated with the built-in image tool. It adapts the reference's soft, tactile floating objects to music, using lavender, powder blue, peach, white, and one tiny blue note. Keep its transparent margin and contain sizing. Exact prompt and source provenance live in `public/images/daylight-music.png.json` and embedded PNG metadata. Album covers remain actual demo assets; the illustration never replaces product proof.
+`SignalDeck` replaces the removed generated illustration with an original React/CSS player. Its paper stack adapts the interaction ideas researched at Aceternity 3D Card, Componentry Orbit Card Stack, and 21st.dev WaveformPlayer; no third-party component source is copied and no new runtime dependency is installed.
+
+The console uses the shared player, three real demo tracks, and 64 RMS waveform samples per track derived from the corresponding MP3. A native range input provides keyboard and pointer seeking. Track buttons expose their selection with aria-pressed. Selecting a track during playback switches audio; otherwise it changes the selected preview without autoplay.
+
+Fine-pointer movement tilts the console by at most 3 degrees per axis, with a 200ms ease-out transform transition; pastel papers fan on hover over 300ms. Keyboard focus flattens the console immediately. Reduced motion disables spatial movement, and touch keeps the static stack. Main controls are 44px or larger. Initial navigation and the readable hero remain server-rendered; the loading fallback is scoped to the dashboard so it cannot hide the homepage without JavaScript.
 
 ## Do's and Don'ts
 
@@ -260,7 +264,7 @@ Fine-pointer artwork hover scales to 1.035 over 500ms; catalog artwork uses the 
 - Do keep keyboard focus, explicit field labels, native shelf scrolling, and reduced-motion behavior.
 - Do retain producer-selected themes and accents.
 - Do label demos and simulated purchases and state the 8% sales fee with separate processing charges.
-- Do keep exact prompts and generation provenance beside shipping generated artwork.
+- Do use code-native interactions and measured audio data; do not add AI-generated illustrations.
 
 ### Don't:
 

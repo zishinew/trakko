@@ -10,7 +10,7 @@ import {
 import { Logo } from './ui';
 import { PlayerProvider } from './player';
 import { demoWorkspace } from '@/lib/demo-data';
-import Image from 'next/image';
+import { SignalDeck } from './signal-deck';
 import { ReleaseShowcase } from './release-showcase';
 export function Landing({ demo, feePercent }: { demo: boolean; feePercent: string }) {
   const sample = demoWorkspace();
@@ -44,16 +44,7 @@ export function Landing({ demo, feePercent }: { demo: boolean; feePercent: strin
                 A home for your sound. A direct line to your listeners.
                 <br /> Upload your beats, set your prices, and start selling with one link.
               </p>
-              <div className="daylight-hero-art">
-                <Image
-                  src="/images/daylight-music.png"
-                  alt="Soft lavender headphones around a powder-blue cassette, with a cloud and a tiny blue music note"
-                  width={1024}
-                  height={1024}
-                  sizes="(max-width: 760px) 280px, 380px"
-                  preload
-                />
-              </div>
+              <SignalDeck beats={sample.beats.slice(0, 3)} />
               <div className="masthead-action">
                 <Link href="/signup" className="button primary">
                   Create your free store <ArrowRight size={18} />

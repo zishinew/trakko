@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-27T01:57:02.916297+00:00",
+  "generatedAt": "2026-10-27T00:00:00-04:00",
   "title": "Design System: Trakko",
   "extensions": {
     "colorMeta": {
@@ -266,7 +266,7 @@
       "kind": "card",
       "refersTo": "release-card",
       "description": "Paper release container and license pill, excerpted without artwork or runtime audio.",
-      "html": "<article class=\"ds-release\"><div><h3>eyesight</h3><p>142 BPM · F♯ minor</p></div><a href=\"#licenses\" aria-label=\"View licenses for eyesight\">From $19.99 ↗</a></article>",
+      "html": "<article class=\"ds-release\"><div><h3>eyesight</h3><p>142 BPM \u00b7 F\u266f minor</p></div><a href=\"#licenses\" aria-label=\"View licenses for eyesight\">From $19.99 \u2197</a></article>",
       "css": ".ds-release{font-family:var(--font-body,Inter),sans-serif;display:flex;align-items:center;justify-content:space-between;gap:8px;max-width:350px;min-width:0;background:#fafdff;color:#0a0d12;border-radius:32px;padding:16px 16px 20px}.ds-release h3{font-size:18px;font-weight:500;margin:0;letter-spacing:-.02em}.ds-release p{font-size:11px;color:#535862;margin:4px 0 0}.ds-release a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 12px;border-radius:9999px;background:#edf4fb;color:#0a0d12;font-size:11px;text-decoration:none}.ds-release a:focus-visible{outline:2px solid var(--accent,#0069e0);outline-offset:4px}@media(hover:hover) and (pointer:fine){.ds-release a:hover{background:#e1eefd}}"
     },
     {
@@ -280,12 +280,12 @@
   ],
   "narrative": {
     "northStar": "Daylight notebook",
-    "overview": "Trakko feels like a generous daylight studio: pale sky surrounds paper surfaces, near-black type sets the hierarchy, and charcoal pill actions give the interface a clear point of emphasis. Medium-weight, regular-width Inter connects expressive marketing with practical producer tools. Soft lavender, peach, and powder-blue washes add warmth without competing with music.\n\nThe user-supplied Geniestudio reference governs this system across marketing, dashboard, authentication, and the default light storefront. Trakko adapts it with locally served Inter in place of Aeonik/Geist, an original transparent music illustration, real playable demo releases, and lavender/peach/powder-blue instead of mint. Producer-selected dark themes and custom accents retain their own surface and contrast tokens.",
+    "overview": "Trakko feels like a generous daylight studio: pale sky surrounds paper surfaces, near-black type sets the hierarchy, and charcoal pill actions give the interface a clear point of emphasis. Medium-weight, regular-width Inter connects expressive marketing with practical producer tools. Soft lavender, peach, and powder-blue washes add warmth without competing with music.\n\nThe user-supplied Geniestudio reference governs this system across marketing, dashboard, authentication, and the default light storefront. Trakko adapts it with locally served Inter in place of Aeonik/Geist, an interactive paper-stack listening room, real playable demo releases, and lavender/peach/powder-blue instead of mint. Producer-selected dark themes and custom accents retain their own surface and contrast tokens. The hero uses a code-native listening console with shared audio state, measured RMS waveforms, pointer depth, hover-fanned papers, and reduced-motion support. No AI-generated hero image remains.",
     "keyCharacteristics": [
       "Pale sky canvas and paper cards with tonal, mostly flat depth.",
       "Regular-width Inter at weight 500 for display and principal headings.",
       "Generous rounded cards, pill actions, and clearly labeled native fields.",
-      "Original soft 3D music imagery alongside genuine release artwork and playback.",
+      "A functional listening room with measured audio waveforms, paper depth, and genuine release playback.",
       "Producer-owned storefront themes, readable task screens, and explicit demo states."
     ],
     "rules": [
@@ -312,15 +312,15 @@
       "Do keep keyboard focus, explicit field labels, native shelf scrolling, and reduced-motion behavior.",
       "Do retain producer-selected themes and accents.",
       "Do label demos and simulated purchases and state the 8% sales fee with separate processing charges.",
-      "Do keep exact prompts and generation provenance beside shipping generated artwork."
+      "Do use code-native interactions and measured audio data; do not add AI-generated illustrations."
     ],
     "donts": [
-      "Don’t restore the charcoal marketing stage, background shader, or slanted browser-window hero.",
-      "Don’t restore green/mint branding or condensed display lettering.",
-      "Don’t use blue as the platform’s primary button fill or gradients as large decorative surfaces.",
-      "Don’t add shadows to ordinary content cards or introduce sharp corners as the main shape language.",
-      "Don’t borrow customer claims, testimonials, adoption figures, or third-party illustration assets.",
-      "Don’t apply marketing headline choreography or oversized display type to producer task screens."
+      "Don\u2019t restore the charcoal marketing stage, background shader, or slanted browser-window hero.",
+      "Don\u2019t restore green/mint branding or condensed display lettering.",
+      "Don\u2019t use blue as the platform\u2019s primary button fill or gradients as large decorative surfaces.",
+      "Don\u2019t add shadows to ordinary content cards or introduce sharp corners as the main shape language.",
+      "Don\u2019t borrow customer claims, testimonials, adoption figures, or third-party illustration assets.",
+      "Don\u2019t apply marketing headline choreography or oversized display type to producer task screens."
     ]
   }
 }

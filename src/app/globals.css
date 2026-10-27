@@ -6569,17 +6569,6 @@ select {
   max-width: 64ch;
   margin: 0 auto;
 }
-.daylight-hero-art {
-  width: 380px;
-  height: 270px;
-  margin: 16px auto 24px;
-}
-.daylight-hero-art img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 .daylight-catalog .masthead-action {
   align-items: center;
   gap: 14px;
@@ -6905,11 +6894,6 @@ select {
   .daylight-intro-copy br {
     display: none;
   }
-  .daylight-hero-art {
-    width: 280px;
-    height: 230px;
-    margin: 12px auto 20px;
-  }
   .daylight-catalog .masthead-action .button {
     font-size: 14px;
     min-height: 48px;
@@ -7036,4 +7020,300 @@ select {
 }
 .storefront.theme-dark .featured-buy {
   color: var(--text);
+}
+/* Trakko listening room: functional audio, paper depth, no generated imagery. */
+.signal-playground {
+  max-width: 860px;
+  margin: 12px auto 28px;
+}
+.signal-stage {
+  position: relative;
+  height: 310px;
+  perspective: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signal-console {
+  width: min(570px, 76%);
+  background: var(--surface);
+  border-radius: 32px;
+  padding: 24px 28px;
+  text-align: left;
+  transform: rotate(-2deg);
+  transition: transform 200ms var(--ease-out);
+  box-shadow: 0 20px 52px #2147751a;
+  position: relative;
+  z-index: 2;
+}
+.signal-console-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.signal-console-top > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.signal-console-top > span:last-child {
+  background: var(--bg);
+  border-radius: 9999px;
+  padding: 5px 9px;
+}
+.signal-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 26px 0 20px;
+}
+.signal-play {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition:
+    transform 150ms var(--ease-out),
+    background 150ms ease;
+}
+.signal-play:active {
+  transform: scale(0.97);
+}
+.signal-track-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.signal-track-name strong {
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.signal-track-name > span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.signal-playing {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.signal-playing i {
+  width: 6px;
+  height: 6px;
+  background: #abb8c8;
+  border-radius: 50%;
+}
+.signal-playing i.is-playing {
+  background: var(--accent);
+}
+.signal-waveform {
+  height: 58px;
+  position: relative;
+}
+.signal-waveform svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+.signal-waveform rect {
+  fill: #c3d6ed;
+}
+.signal-waveform rect.wave-played {
+  fill: var(--accent);
+}
+.signal-waveform input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.signal-waveform:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+.signal-waveform input:disabled {
+  cursor: default;
+}
+.signal-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 9px;
+  font-variant-numeric: tabular-nums;
+}
+.signal-paper {
+  position: absolute;
+  width: 190px;
+  height: 220px;
+  border-radius: 28px;
+  padding: 23px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: transform 300ms var(--ease-out);
+}
+.signal-paper-left {
+  background: #f1e6ff;
+  color: #493667;
+  left: 3%;
+  transform: translateX(22px) rotate(-12deg);
+}
+.signal-paper-right {
+  background: #ffecdf;
+  color: #70462d;
+  right: 3%;
+  transform: translateX(-22px) rotate(12deg);
+}
+.signal-paper > span {
+  font-size: 11px;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+.signal-paper > strong {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+.signal-selector {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 10px;
+}
+.signal-selector button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  padding: 10px 17px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+.signal-selector button[aria-pressed='true'] {
+  background: var(--ink);
+  color: #fff;
+}
+.signal-noscript {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.signal-stage:focus-within .signal-console {
+  transform: none !important;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .signal-stage:hover .signal-paper-left {
+    transform: translateX(-10px) rotate(-15deg);
+  }
+  .signal-stage:hover .signal-paper-right {
+    transform: translateX(10px) rotate(15deg);
+  }
+  .signal-play:hover {
+    background: #303743;
+    transform: scale(1.04);
+  }
+  .signal-selector button:not([aria-pressed='true']):hover {
+    background: #dbeafa;
+    color: var(--text);
+  }
+}
+@media (max-width: 760px) {
+  .signal-playground {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  .signal-stage {
+    height: 280px;
+  }
+  .signal-console {
+    width: calc(100% - 24px);
+    padding: 20px;
+    border-radius: 24px;
+    transform: rotate(-2deg);
+  }
+  .signal-paper {
+    height: 200px;
+    width: 140px;
+    padding: 16px;
+  }
+  .signal-paper-left {
+    left: 3%;
+    transform: rotate(-8deg) translateY(-13px);
+  }
+  .signal-paper-right {
+    right: 3%;
+    transform: rotate(8deg) translateY(-13px);
+  }
+  .signal-paper > * {
+    visibility: hidden;
+  }
+  .signal-track {
+    gap: 12px;
+    margin: 22px 0 16px;
+  }
+  .signal-play {
+    width: 52px;
+    height: 52px;
+  }
+  .signal-track-name strong {
+    font-size: 25px;
+  }
+  .signal-track-name > span {
+    font-size: 10px;
+  }
+  .signal-playing {
+    display: none;
+  }
+  .signal-selector {
+    gap: 2px;
+  }
+  .signal-selector button {
+    padding: 10px 12px;
+    gap: 6px;
+    font-size: 11px;
+  }
+  .signal-waveform {
+    height: 48px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signal-console,
+  .signal-paper,
+  .signal-play {
+    transform: none !important;
+    transition: none;
+  }
 }
