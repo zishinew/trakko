@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 for (const width of [1440, 390]) {
-  test(`hero windows support keyboard licensing and workspace navigation at ${width}px`, async ({
+  test(`demo releases support keyboard licensing and workspace navigation at ${width}px`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 900 });

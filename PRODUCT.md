@@ -33,3 +33,6 @@ Keep selling and listening simple. Make task actions clear. Preserve private fil
 The user rejected the condensed typography and green Studio design. The replacement reference is https://guns.lol/, with fewer colors and a cleaner, more minimalist presentation. Use regular-width sans-serif type, centered marketing composition, charcoal/white/muted-gray marketing surfaces, restrained motion, and neutral working screens. Producer-supplied storefront theme/accent stays user-owned. This supersedes the independent-label/green brand commitment above.
 
 The user explicitly requested removing the remaining green color scheme. Use neutral gray for platform status/chart treatments, the demo identity, and the default store accent.
+
+## Current visual direction — October 26, 2026
+The user supplied the Geniestudio style reference and confirmed applying it across Trakko. This supersedes the dark guns.lol treatment and slanted browser-window hero. Preserve all features, Trakko branding, customizable producer links, 8% fee, and producer-owned storefront settings. Use a pale sky-blue canvas, paper-white surfaces, medium-weight Inter as the supplied Aeonik/Geist substitute, rounded cards and pill controls, generous margins, dark charcoal actions, and original soft 3D music artwork. Keep the previous no-green preference: lavender/peach/powder-blue pastels replace mint.

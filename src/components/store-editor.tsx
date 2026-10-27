@@ -124,7 +124,7 @@ export function StoreEditor({
             <div className="form-section-label">APPEARANCE</div>
             <Field label="Accent color">
               <div className="color-options">
-                {['#626270', '#365edc', '#c35230', '#8b4b97', '#ff2d8d'].map((c) => (
+                {['#0069e0', '#626270', '#365edc', '#c35230', '#8b4b97', '#ff2d8d'].map((c) => (
                   <button
                     type="button"
                     aria-label={`Use accent ${c}`}

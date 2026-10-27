@@ -27,7 +27,7 @@ export function demoWorkspace(): Workspace {
     bio: 'For the late nights & the early mornings.\nIndependent sounds from Toronto.',
     avatar_url: '/demo/avatar.svg',
     banner_url: '',
-    accent: '#626270',
+    accent: '#0069e0',
     theme: 'light' as const,
     instagram: 'https://instagram.com',
     youtube: 'https://youtube.com',

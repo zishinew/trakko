@@ -10,13 +10,13 @@ import {
 import { Logo } from './ui';
 import { PlayerProvider } from './player';
 import { demoWorkspace } from '@/lib/demo-data';
-import { HeroShowcase } from './hero-showcase';
-import { StudioAtmosphere } from './studio-atmosphere';
+import Image from 'next/image';
+import { ReleaseShowcase } from './release-showcase';
 export function Landing({ demo, feePercent }: { demo: boolean; feePercent: string }) {
   const sample = demoWorkspace();
   return (
     <PlayerProvider>
-      <div className="landing label-catalog studio-catalog clean-catalog">
+      <div className="landing label-catalog daylight-catalog">
         <header className="landing-nav">
           <Logo />
           <nav aria-label="Main navigation">
@@ -30,8 +30,7 @@ export function Landing({ demo, feePercent }: { demo: boolean; feePercent: strin
           </nav>
         </header>
         <main>
-          <section className="label-masthead">
-            <StudioAtmosphere />
+          <section className="label-masthead daylight-hero">
             <div className="studio-intro">
               <h1>
                 <span className="title-line">
@@ -41,24 +40,32 @@ export function Landing({ demo, feePercent }: { demo: boolean; feePercent: strin
                   <span>Your business.</span>
                 </span>
               </h1>
-              <div className="masthead-details">
-                <p>
-                  A home for your sound. A direct line to your listeners.
-                  <br /> Upload your beats, set your prices, and start selling with one link.
-                </p>
-                <div className="masthead-action">
-                  <Link href="/signup" className="button primary">
-                    Create your free store <ArrowRight size={18} />
-                  </Link>
-                  <Link href="/ziova" className="button secondary">
-                    Explore the demo <ArrowUpRight size={16} />
-                  </Link>
-                  <span>No subscription. {feePercent}% per completed sale.</span>
-                </div>
+              <p className="daylight-intro-copy">
+                A home for your sound. A direct line to your listeners.
+                <br /> Upload your beats, set your prices, and start selling with one link.
+              </p>
+              <div className="daylight-hero-art">
+                <Image
+                  src="/images/daylight-music.png"
+                  alt="Soft lavender headphones around a powder-blue cassette, with a cloud and a tiny blue music note"
+                  width={1024}
+                  height={1024}
+                  sizes="(max-width: 760px) 280px, 380px"
+                  preload
+                />
+              </div>
+              <div className="masthead-action">
+                <Link href="/signup" className="button primary">
+                  Create your free store <ArrowRight size={18} />
+                </Link>
+                <span>No subscription. {feePercent}% per completed sale.</span>
+                <Link href="/ziova" className="daylight-demo-link">
+                  Take a look around <ArrowUpRight size={16} />
+                </Link>
               </div>
             </div>
-            <HeroShowcase workspace={sample} />
           </section>
+          <ReleaseShowcase workspace={sample} />
           <section className="landing-bottom" id="how-it-works">
             <div>
               <h2>

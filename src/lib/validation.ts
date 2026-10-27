@@ -30,7 +30,7 @@ export const storeSchema = z.object({
   accent: z
     .string()
     .regex(/^#[0-9a-fA-F]{6}$/)
-    .default('#626270'),
+    .default('#0069e0'),
   theme: z.enum(['dark', 'light']).default('light'),
   instagram: webUrl.default(''),
   youtube: webUrl.default(''),

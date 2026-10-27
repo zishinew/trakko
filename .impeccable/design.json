@@ -1,446 +1,151 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-16T16:53:08.052313+00:00",
+  "generatedAt": "2026-10-27T01:57:02.916297+00:00",
   "title": "Design System: Trakko",
   "extensions": {
     "colorMeta": {
       "bg": {
         "role": "neutral",
-        "displayName": "Bg",
-        "tonalRamp": [
-          "oklch(15% 0.00264 286.35)",
-          "oklch(26% 0.00264 286.35)",
-          "oklch(38% 0.00264 286.35)",
-          "oklch(49% 0.00264 286.35)",
-          "oklch(61% 0.00264 286.35)",
-          "oklch(72% 0.00264 286.35)",
-          "oklch(84% 0.00264 286.35)",
-          "oklch(95% 0.00264 286.35)"
-        ]
+        "displayName": "Sky Canvas"
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Surface",
-        "tonalRamp": [
-          "oklch(15% 0.00000 89.88)",
-          "oklch(26% 0.00000 89.88)",
-          "oklch(38% 0.00000 89.88)",
-          "oklch(49% 0.00000 89.88)",
-          "oklch(61% 0.00000 89.88)",
-          "oklch(72% 0.00000 89.88)",
-          "oklch(84% 0.00000 89.88)",
-          "oklch(95% 0.00000 89.88)"
-        ]
+        "displayName": "Paper"
       },
       "surface-2": {
         "role": "neutral",
-        "displayName": "Surface 2",
-        "tonalRamp": [
-          "oklch(15% 0.00399 286.32)",
-          "oklch(26% 0.00399 286.32)",
-          "oklch(38% 0.00399 286.32)",
-          "oklch(49% 0.00399 286.32)",
-          "oklch(61% 0.00399 286.32)",
-          "oklch(72% 0.00399 286.32)",
-          "oklch(84% 0.00399 286.32)",
-          "oklch(95% 0.00399 286.32)"
-        ]
+        "displayName": "Surface 2"
       },
-      "line": {
+      "white": {
         "role": "neutral",
-        "displayName": "Line",
-        "tonalRamp": [
-          "oklch(15% 0.00808 286.24)",
-          "oklch(26% 0.00808 286.24)",
-          "oklch(38% 0.00808 286.24)",
-          "oklch(49% 0.00808 286.24)",
-          "oklch(61% 0.00808 286.24)",
-          "oklch(72% 0.00808 286.24)",
-          "oklch(84% 0.00808 286.24)",
-          "oklch(95% 0.00808 286.24)"
-        ]
+        "displayName": "White"
       },
       "text": {
         "role": "neutral",
-        "displayName": "Text",
-        "tonalRamp": [
-          "oklch(15% 0.00752 285.83)",
-          "oklch(26% 0.00752 285.83)",
-          "oklch(38% 0.00752 285.83)",
-          "oklch(49% 0.00752 285.83)",
-          "oklch(61% 0.00752 285.83)",
-          "oklch(72% 0.00752 285.83)",
-          "oklch(84% 0.00752 285.83)",
-          "oklch(95% 0.00752 285.83)"
-        ]
-      },
-      "muted": {
-        "role": "neutral",
-        "displayName": "Muted",
-        "tonalRamp": [
-          "oklch(15% 0.01887 285.70)",
-          "oklch(26% 0.01887 285.70)",
-          "oklch(38% 0.01887 285.70)",
-          "oklch(49% 0.01887 285.70)",
-          "oklch(61% 0.01887 285.70)",
-          "oklch(72% 0.01887 285.70)",
-          "oklch(84% 0.01887 285.70)",
-          "oklch(95% 0.01887 285.70)"
-        ]
-      },
-      "accent": {
-        "role": "primary",
-        "displayName": "Accent",
-        "tonalRamp": [
-          "oklch(15% 0.02207 285.58)",
-          "oklch(26% 0.02207 285.58)",
-          "oklch(38% 0.02207 285.58)",
-          "oklch(49% 0.02207 285.58)",
-          "oklch(61% 0.02207 285.58)",
-          "oklch(72% 0.02207 285.58)",
-          "oklch(84% 0.02207 285.58)",
-          "oklch(95% 0.02207 285.58)"
-        ]
+        "displayName": "Ink Text"
       },
       "ink": {
         "role": "primary",
-        "displayName": "Ink",
-        "tonalRamp": [
-          "oklch(15% 0.00752 285.83)",
-          "oklch(26% 0.00752 285.83)",
-          "oklch(38% 0.00752 285.83)",
-          "oklch(49% 0.00752 285.83)",
-          "oklch(61% 0.00752 285.83)",
-          "oklch(72% 0.00752 285.83)",
-          "oklch(84% 0.00752 285.83)",
-          "oklch(95% 0.00752 285.83)"
-        ]
+        "displayName": "Charcoal"
       },
-      "selection": {
+      "muted": {
         "role": "neutral",
-        "displayName": "Selection",
-        "tonalRamp": [
-          "oklch(15% 0.01092 286.17)",
-          "oklch(26% 0.01092 286.17)",
-          "oklch(38% 0.01092 286.17)",
-          "oklch(49% 0.01092 286.17)",
-          "oklch(61% 0.01092 286.17)",
-          "oklch(72% 0.01092 286.17)",
-          "oklch(84% 0.01092 286.17)",
-          "oklch(95% 0.01092 286.17)"
-        ]
+        "displayName": "Graphite"
       },
-      "auth-field": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Iris Blue"
+      },
+      "line": {
         "role": "neutral",
-        "displayName": "Auth Field",
-        "tonalRamp": [
-          "oklch(15% 0.00536 286.30)",
-          "oklch(26% 0.00536 286.30)",
-          "oklch(38% 0.00536 286.30)",
-          "oklch(49% 0.00536 286.30)",
-          "oklch(61% 0.00536 286.30)",
-          "oklch(72% 0.00536 286.30)",
-          "oklch(84% 0.00536 286.30)",
-          "oklch(95% 0.00536 286.30)"
-        ]
+        "displayName": "Line"
       },
       "sidebar": {
         "role": "neutral",
-        "displayName": "Sidebar",
-        "tonalRamp": [
-          "oklch(15% 0.00399 286.32)",
-          "oklch(26% 0.00399 286.32)",
-          "oklch(38% 0.00399 286.32)",
-          "oklch(49% 0.00399 286.32)",
-          "oklch(61% 0.00399 286.32)",
-          "oklch(72% 0.00399 286.32)",
-          "oklch(84% 0.00399 286.32)",
-          "oklch(95% 0.00399 286.32)"
-        ]
+        "displayName": "Sidebar"
+      },
+      "lavender": {
+        "role": "secondary",
+        "displayName": "Lavender Wash"
+      },
+      "peach": {
+        "role": "secondary",
+        "displayName": "Peach Wash"
+      },
+      "powder-blue": {
+        "role": "secondary",
+        "displayName": "Powder Blue"
+      },
+      "setup": {
+        "role": "neutral",
+        "displayName": "Setup"
       },
       "task-hover": {
         "role": "neutral",
-        "displayName": "Task Hover",
-        "tonalRamp": [
-          "oklch(15% 0.01057 285.79)",
-          "oklch(26% 0.01057 285.79)",
-          "oklch(38% 0.01057 285.79)",
-          "oklch(49% 0.01057 285.79)",
-          "oklch(61% 0.01057 285.79)",
-          "oklch(72% 0.01057 285.79)",
-          "oklch(84% 0.01057 285.79)",
-          "oklch(95% 0.01057 285.79)"
-        ]
+        "displayName": "Task Hover"
       },
-      "stage": {
+      "price-surface": {
         "role": "neutral",
-        "displayName": "Stage",
-        "tonalRamp": [
-          "oklch(15% 0.00439 285.82)",
-          "oklch(26% 0.00439 285.82)",
-          "oklch(38% 0.00439 285.82)",
-          "oklch(49% 0.00439 285.82)",
-          "oklch(61% 0.00439 285.82)",
-          "oklch(72% 0.00439 285.82)",
-          "oklch(84% 0.00439 285.82)",
-          "oklch(95% 0.00439 285.82)"
-        ]
+        "displayName": "Price Surface"
       },
-      "stage-text": {
-        "role": "primary",
-        "displayName": "Stage Text",
-        "tonalRamp": [
-          "oklch(15% 0.00133 286.38)",
-          "oklch(26% 0.00133 286.38)",
-          "oklch(38% 0.00133 286.38)",
-          "oklch(49% 0.00133 286.38)",
-          "oklch(61% 0.00133 286.38)",
-          "oklch(72% 0.00133 286.38)",
-          "oklch(84% 0.00133 286.38)",
-          "oklch(95% 0.00133 286.38)"
-        ]
-      },
-      "stage-muted": {
+      "price-hover": {
         "role": "neutral",
-        "displayName": "Stage Muted",
-        "tonalRamp": [
-          "oklch(15% 0.01294 286.07)",
-          "oklch(26% 0.01294 286.07)",
-          "oklch(38% 0.01294 286.07)",
-          "oklch(49% 0.01294 286.07)",
-          "oklch(61% 0.01294 286.07)",
-          "oklch(72% 0.01294 286.07)",
-          "oklch(84% 0.01294 286.07)",
-          "oklch(95% 0.01294 286.07)"
-        ]
-      },
-      "nav-surface": {
-        "role": "neutral",
-        "displayName": "Nav Surface",
-        "tonalRamp": [
-          "oklch(15% 0.00399 286.02)",
-          "oklch(26% 0.00399 286.02)",
-          "oklch(38% 0.00399 286.02)",
-          "oklch(49% 0.00399 286.02)",
-          "oklch(61% 0.00399 286.02)",
-          "oklch(72% 0.00399 286.02)",
-          "oklch(84% 0.00399 286.02)",
-          "oklch(95% 0.00399 286.02)"
-        ]
-      },
-      "secondary-surface": {
-        "role": "neutral",
-        "displayName": "Secondary Surface",
-        "tonalRamp": [
-          "oklch(15% 0.00782 285.71)",
-          "oklch(26% 0.00782 285.71)",
-          "oklch(38% 0.00782 285.71)",
-          "oklch(49% 0.00782 285.71)",
-          "oklch(61% 0.00782 285.71)",
-          "oklch(72% 0.00782 285.71)",
-          "oklch(84% 0.00782 285.71)",
-          "oklch(95% 0.00782 285.71)"
-        ]
-      },
-      "secondary-text": {
-        "role": "neutral",
-        "displayName": "Secondary Text",
-        "tonalRamp": [
-          "oklch(15% 0.00534 286.30)",
-          "oklch(26% 0.00534 286.30)",
-          "oklch(38% 0.00534 286.30)",
-          "oklch(49% 0.00534 286.30)",
-          "oklch(61% 0.00534 286.30)",
-          "oklch(72% 0.00534 286.30)",
-          "oklch(84% 0.00534 286.30)",
-          "oklch(95% 0.00534 286.30)"
-        ]
-      },
-      "workflow": {
-        "role": "neutral",
-        "displayName": "Workflow",
-        "tonalRamp": [
-          "oklch(15% 0.00407 285.98)",
-          "oklch(26% 0.00407 285.98)",
-          "oklch(38% 0.00407 285.98)",
-          "oklch(49% 0.00407 285.98)",
-          "oklch(61% 0.00407 285.98)",
-          "oklch(72% 0.00407 285.98)",
-          "oklch(84% 0.00407 285.98)",
-          "oklch(95% 0.00407 285.98)"
-        ]
-      },
-      "pricing-surface": {
-        "role": "neutral",
-        "displayName": "Pricing Surface",
-        "tonalRamp": [
-          "oklch(15% 0.00596 285.84)",
-          "oklch(26% 0.00596 285.84)",
-          "oklch(38% 0.00596 285.84)",
-          "oklch(49% 0.00596 285.84)",
-          "oklch(61% 0.00596 285.84)",
-          "oklch(72% 0.00596 285.84)",
-          "oklch(84% 0.00596 285.84)",
-          "oklch(95% 0.00596 285.84)"
-        ]
-      },
-      "marketing-hover": {
-        "role": "neutral",
-        "displayName": "Marketing Hover",
-        "tonalRamp": [
-          "oklch(15% 0.00812 286.23)",
-          "oklch(26% 0.00812 286.23)",
-          "oklch(38% 0.00812 286.23)",
-          "oklch(49% 0.00812 286.23)",
-          "oklch(61% 0.00812 286.23)",
-          "oklch(72% 0.00812 286.23)",
-          "oklch(84% 0.00812 286.23)",
-          "oklch(95% 0.00812 286.23)"
-        ]
-      },
-      "secondary-hover": {
-        "role": "neutral",
-        "displayName": "Secondary Hover",
-        "tonalRamp": [
-          "oklch(15% 0.00925 285.74)",
-          "oklch(26% 0.00925 285.74)",
-          "oklch(38% 0.00925 285.74)",
-          "oklch(49% 0.00925 285.74)",
-          "oklch(61% 0.00925 285.74)",
-          "oklch(72% 0.00925 285.74)",
-          "oklch(84% 0.00925 285.74)",
-          "oklch(95% 0.00925 285.74)"
-        ]
-      },
-      "marketing-stroke": {
-        "role": "neutral",
-        "displayName": "Marketing Stroke",
-        "tonalRamp": [
-          "oklch(15% 0.00000 0.00)",
-          "oklch(26% 0.00000 0.00)",
-          "oklch(38% 0.00000 0.00)",
-          "oklch(49% 0.00000 0.00)",
-          "oklch(61% 0.00000 0.00)",
-          "oklch(72% 0.00000 0.00)",
-          "oklch(84% 0.00000 0.00)",
-          "oklch(95% 0.00000 0.00)"
-        ]
-      },
-      "secondary-stroke": {
-        "role": "neutral",
-        "displayName": "Secondary Stroke",
-        "tonalRamp": [
-          "oklch(15% 0.00000 0.00)",
-          "oklch(26% 0.00000 0.00)",
-          "oklch(38% 0.00000 0.00)",
-          "oklch(49% 0.00000 0.00)",
-          "oklch(61% 0.00000 0.00)",
-          "oklch(72% 0.00000 0.00)",
-          "oklch(84% 0.00000 0.00)",
-          "oklch(95% 0.00000 0.00)"
-        ]
+        "displayName": "Price Hover"
       },
       "error": {
         "role": "neutral",
-        "displayName": "Error",
-        "tonalRamp": [
-          "oklch(15% 0.15842 19.46)",
-          "oklch(26% 0.15842 19.46)",
-          "oklch(38% 0.15842 19.46)",
-          "oklch(49% 0.15842 19.46)",
-          "oklch(61% 0.15842 19.46)",
-          "oklch(72% 0.15842 19.46)",
-          "oklch(84% 0.15842 19.46)",
-          "oklch(95% 0.15842 19.46)"
-        ]
+        "displayName": "Error"
       },
       "error-bg": {
         "role": "neutral",
-        "displayName": "Error Bg",
-        "tonalRamp": [
-          "oklch(15% 0.01517 12.42)",
-          "oklch(26% 0.01517 12.42)",
-          "oklch(38% 0.01517 12.42)",
-          "oklch(49% 0.01517 12.42)",
-          "oklch(61% 0.01517 12.42)",
-          "oklch(72% 0.01517 12.42)",
-          "oklch(84% 0.01517 12.42)",
-          "oklch(95% 0.01517 12.42)"
-        ]
+        "displayName": "Error Bg"
       },
       "error-line": {
         "role": "neutral",
-        "displayName": "Error Line",
-        "tonalRamp": [
-          "oklch(15% 0.04363 7.32)",
-          "oklch(26% 0.04363 7.32)",
-          "oklch(38% 0.04363 7.32)",
-          "oklch(49% 0.04363 7.32)",
-          "oklch(61% 0.04363 7.32)",
-          "oklch(72% 0.04363 7.32)",
-          "oklch(84% 0.04363 7.32)",
-          "oklch(95% 0.04363 7.32)"
-        ]
+        "displayName": "Error Line"
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Centered marketing hero; local variable Inter."
+        "purpose": "Centered marketing hero; maximum 148px, phone maximum 72px."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Working page hierarchy."
+        "purpose": "Marketing section hierarchy."
       },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Section and authentication hierarchy."
+      "page-title": {
+        "displayName": "Page Title",
+        "purpose": "Working pages at 40px, 30px on phones."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Reading and native fields."
+        "purpose": "Medium-weight reading and native UI."
+      },
+      "intro": {
+        "displayName": "Intro",
+        "purpose": "Homepage supporting copy with a bounded measure."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Explicit field labels."
+        "purpose": "Compact explicit field labels."
       },
       "button": {
         "displayName": "Button",
-        "purpose": "Compact working actions."
+        "purpose": "Working actions."
+      },
+      "marketing-button": {
+        "displayName": "Marketing Button",
+        "purpose": "Main homepage create-store action."
       }
     },
     "shadows": [
       {
+        "name": "primary-control",
+        "value": "0 1px 2px #0a0d121f",
+        "purpose": "Restrained edge under charcoal actions."
+      },
+      {
         "name": "overlay",
-        "value": "0 24px 80px #20202430",
-        "purpose": "Dialog overlay."
+        "value": "0 24px 80px #04459018",
+        "purpose": "Cool diffuse modal depth."
       },
       {
         "name": "player",
         "value": "0 -4px 24px #2020240d",
-        "purpose": "Persistent player."
-      },
-      {
-        "name": "authentication",
-        "value": "0 18px 45px #20202410",
-        "purpose": "Authentication card."
+        "purpose": "Persistent listening controls."
       },
       {
         "name": "preview",
         "value": "0 5px 16px #0003",
-        "purpose": "Playback control over artwork."
-      },
-      {
-        "name": "hero-window",
-        "value": "0 28px 60px #0008",
-        "purpose": "Structural depth for the homepage perspective windows only."
+        "purpose": "Playback legibility over cover artwork."
       }
     ],
     "motion": [
       {
         "name": "ease-out",
         "value": "cubic-bezier(0.23, 1, 0.32, 1)",
-        "purpose": "Control and title transitions."
+        "purpose": "Control, title, and artwork transitions."
       },
       {
         "name": "ease-drawer",
@@ -450,32 +155,32 @@
       {
         "name": "press-duration",
         "value": "120ms",
-        "purpose": "Task control feedback."
-      },
-      {
-        "name": "title-duration",
-        "value": "650ms",
-        "purpose": "Marketing hero entrance."
-      },
-      {
-        "name": "title-delay",
-        "value": "110ms",
-        "purpose": "Second hero line."
+        "purpose": "Brief control feedback."
       },
       {
         "name": "feedback-duration",
         "value": "150ms",
-        "purpose": "Arrows, fields and navigation."
+        "purpose": "Fields, icons, and navigation."
+      },
+      {
+        "name": "title-duration",
+        "value": "650ms",
+        "purpose": "One bounded homepage title entrance; removed under reduced motion."
+      },
+      {
+        "name": "title-delay",
+        "value": "80ms",
+        "purpose": "Second homepage headline line."
       },
       {
         "name": "artwork-duration",
         "value": "500ms",
-        "purpose": "Marketing artwork hover."
+        "purpose": "Fine-pointer marketing cover hover; removed under reduced motion."
       },
       {
         "name": "catalog-artwork-duration",
         "value": "300ms",
-        "purpose": "Storefront artwork hover."
+        "purpose": "Catalog cover hover."
       },
       {
         "name": "player-duration",
@@ -486,66 +191,16 @@
         "name": "success-duration",
         "value": "180ms",
         "purpose": "Written success feedback."
-      },
-      {
-        "name": "shader-frame-rate",
-        "value": "30fps",
-        "purpose": "Pauses hidden, offscreen or manually; time zero under reduced motion."
-      },
-      {
-        "name": "shader-width-cap",
-        "value": "1440px",
-        "purpose": "Bounded background rendering."
-      },
-      {
-        "name": "shader-pixel-ratio",
-        "value": "1.25 desktop / 0.8 below 600px",
-        "purpose": "Low-power resolution cap."
-      },
-      {
-        "name": "showcase-settle-duration",
-        "value": "800ms",
-        "purpose": "One CSS entry per desktop/tablet window; backwards fill and explicit end opacity 1."
-      },
-      {
-        "name": "showcase-settle-delay",
-        "value": "80ms",
-        "purpose": "Foreground follows the rear window; no loop or new JavaScript animation."
-      },
-      {
-        "name": "showcase-hover-duration",
-        "value": "500ms",
-        "purpose": "Fine-pointer angle reduction and 6px lift. Focus flattens immediately at stacking order 3; reduced motion removes transforms and transitions."
       }
     ],
     "breakpoints": [
       {
-        "name": "wide",
-        "value": "1600px"
-      },
-      {
-        "name": "compact-desktop",
-        "value": "1200px"
-      },
-      {
-        "name": "marketing-margin",
-        "value": "1160px"
-      },
-      {
-        "name": "stack-explanation",
-        "value": "1100px"
-      },
-      {
-        "name": "compact-layout",
+        "name": "tablet-caption",
         "value": "1000px"
       },
       {
         "name": "mobile",
         "value": "760px"
-      },
-      {
-        "name": "narrow-phone",
-        "value": "390px"
       }
     ]
   },
@@ -554,126 +209,118 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Main action on light working screens.",
+      "description": "Charcoal pill for the main workspace action.",
       "html": "<button class=\"ds-button ds-primary\">Upload beat</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body,Inter),sans-serif;font-size:13px;font-weight:650;line-height:1.5;padding:11px 17px;min-height:44px;border:1px solid var(--line,#e2e2e8);border-radius:8px;cursor:pointer;transition:transform 120ms cubic-bezier(.23,1,.32,1),background-color 120ms ease,border-color 120ms ease}.ds-button:active{transform:scale(.97)}.ds-button:focus-visible{outline:2px solid var(--accent,#626270);outline-offset:4px}.ds-button:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{background:var(--ink,#202024);color:#fff;border-color:var(--ink,#202024)}@media(hover:hover) and (pointer:fine){.ds-primary:hover{background:#323238;border-color:#323238}}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body,Inter),sans-serif;font-size:13px;font-weight:500;line-height:1.5;letter-spacing:-.01em;min-height:44px;padding:12px 24px;border:1px solid transparent;border-radius:9999px;cursor:pointer;transition:transform 120ms cubic-bezier(.23,1,.32,1),background-color 120ms ease}.ds-button:focus-visible{outline:2px solid var(--accent,#0069e0);outline-offset:4px}.ds-button:active{transform:scale(.97)}.ds-button:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-primary{background:var(--ink,#181d27);color:#fff;box-shadow:0 1px 2px #0a0d121f}@media(hover:hover) and (pointer:fine){.ds-primary:hover{background:#303743}}"
     },
     {
       "name": "Secondary Button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Supporting workspace action.",
+      "description": "Paper pill for supporting actions.",
       "html": "<button class=\"ds-button ds-secondary\">View store</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body,Inter),sans-serif;font-size:13px;font-weight:650;line-height:1.5;padding:11px 17px;min-height:44px;border:1px solid var(--line,#e2e2e8);border-radius:8px;cursor:pointer;transition:transform 120ms cubic-bezier(.23,1,.32,1),background-color 120ms ease,border-color 120ms ease}.ds-button:active{transform:scale(.97)}.ds-button:focus-visible{outline:2px solid var(--accent,#626270);outline-offset:4px}.ds-button:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-secondary{background:transparent;color:var(--text,#202024)}@media(hover:hover) and (pointer:fine){.ds-secondary:hover{background:var(--surface-2,#f0f0f3)}}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body,Inter),sans-serif;font-size:13px;font-weight:500;line-height:1.5;letter-spacing:-.01em;min-height:44px;padding:12px 24px;border:1px solid transparent;border-radius:9999px;cursor:pointer;transition:transform 120ms cubic-bezier(.23,1,.32,1),background-color 120ms ease}.ds-button:focus-visible{outline:2px solid var(--accent,#0069e0);outline-offset:4px}.ds-button:active{transform:scale(.97)}.ds-button:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-secondary{background:var(--surface,#fafdff);color:var(--ink,#181d27);border-color:var(--line,#dce6ef)}@media(hover:hover) and (pointer:fine){.ds-secondary:hover{background:var(--surface-2,#f6f7f8)}}"
     },
     {
       "name": "Marketing Action",
       "kind": "button",
       "refersTo": "button-marketing",
-      "description": "White create-store action on charcoal.",
-      "html": "<button class=\"ds-button ds-marketing\">Create your free store</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body,Inter),sans-serif;font-size:13px;font-weight:650;line-height:1.5;padding:11px 17px;min-height:44px;border:1px solid var(--line,#e2e2e8);border-radius:8px;cursor:pointer;transition:transform 120ms cubic-bezier(.23,1,.32,1),background-color 120ms ease,border-color 120ms ease}.ds-button:active{transform:scale(.97)}.ds-button:focus-visible{outline:2px solid var(--accent,#626270);outline-offset:4px}.ds-button:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-marketing{background:var(--stage-text,#f4f4f5);color:#111114;border-color:var(--stage-text,#f4f4f5);font-weight:600;min-height:46px;padding:12px 20px;border-radius:10px}@media(hover:hover) and (pointer:fine){.ds-marketing:hover{background:#dcdce2;border-color:#dcdce2}}"
-    },
-    {
-      "name": "Marketing Secondary",
-      "kind": "button",
-      "refersTo": "button-marketing-secondary",
-      "description": "Quieter demo action paired with create store.",
-      "html": "<button class=\"ds-button ds-marketing-secondary\">Explore the demo</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body,Inter),sans-serif;font-size:13px;font-weight:650;line-height:1.5;padding:11px 17px;min-height:44px;border:1px solid var(--line,#e2e2e8);border-radius:8px;cursor:pointer;transition:transform 120ms cubic-bezier(.23,1,.32,1),background-color 120ms ease,border-color 120ms ease}.ds-button:active{transform:scale(.97)}.ds-button:focus-visible{outline:2px solid var(--accent,#626270);outline-offset:4px}.ds-button:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-marketing-secondary{background:#18181c;color:#ececf0;border-color:#ffffff18;min-height:46px;padding:12px 20px;border-radius:10px}@media(hover:hover) and (pointer:fine){.ds-marketing-secondary:hover{background:#242429}}"
+      "description": "Larger dark create-store action on the daylight canvas.",
+      "html": "<button class=\"ds-button ds-marketing\">Create your free store <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body,Inter),sans-serif;font-size:13px;font-weight:500;line-height:1.5;letter-spacing:-.01em;min-height:44px;padding:12px 24px;border:1px solid transparent;border-radius:9999px;cursor:pointer;transition:transform 120ms cubic-bezier(.23,1,.32,1),background-color 120ms ease}.ds-button:focus-visible{outline:2px solid var(--accent,#0069e0);outline-offset:4px}.ds-button:active{transform:scale(.97)}.ds-button:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-marketing{background:#181d27;color:#fff;min-height:52px;font-size:16px;padding:14px 32px;box-shadow:0 1px 2px #0a0d121f}@media(hover:hover) and (pointer:fine){.ds-marketing:hover{background:#303743}}"
     },
     {
       "name": "Text Field",
       "kind": "input",
       "refersTo": "input",
-      "description": "Explicit label and native field.",
-      "html": "<label class=\"ds-field\" for=\"ds-title\">Beat title<input id=\"ds-title\" class=\"ds-input\" placeholder=\"Name your release\"></label>",
-      "css": ".ds-field{display:flex;flex-direction:column;gap:7px;font-family:var(--font-body,Inter),sans-serif;color:var(--text,#202024);font-size:13px;font-weight:600}.ds-input{width:100%;background:var(--surface,#fff);border:1px solid var(--line,#e2e2e8);border-radius:7px;padding:12px 14px;min-height:44px;font-family:var(--font-body,Inter),sans-serif;font-size:14px;line-height:1.5;font-weight:400;color:var(--text,#202024);transition:border-color 150ms ease,box-shadow 150ms ease}.ds-input::placeholder{color:var(--muted,#63636f)}.ds-input:focus-visible{outline:2px solid var(--accent,#626270);outline-offset:1px}@media(pointer:coarse){.ds-input{font-size:16px}}@media(prefers-reduced-motion:reduce){.ds-input{transition:none}}"
+      "description": "Explicitly labeled native field with daylight surface and focus.",
+      "html": "<label class=\"ds-field\" for=\"ds-title\">Beat title<input class=\"ds-input\" id=\"ds-title\" placeholder=\"Name your release\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:7px;font-family:var(--font-body,Inter),sans-serif;color:var(--text,#0a0d12);font-size:13px;font-weight:600}.ds-input{font-family:var(--font-body,Inter),sans-serif;min-height:44px;padding:12px 14px;border:1px solid var(--line,#dce6ef);border-radius:16px;background:var(--surface,#fafdff);color:var(--text,#0a0d12);font-size:14px;line-height:1.5;transition:border-color 150ms ease}.ds-input::placeholder{color:var(--muted,#535862)}.ds-input:focus-visible{outline:2px solid var(--accent,#0069e0);outline-offset:1px}@media(pointer:coarse){.ds-input{font-size:16px}}@media(prefers-reduced-motion:reduce){.ds-input{transition:none}}"
     },
     {
       "name": "Workspace Navigation",
       "kind": "nav",
       "refersTo": "navigation-active",
-      "description": "Neutral sidebar with a clear current page.",
+      "description": "Powder-tinted sidebar with a charcoal current-page item.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Producer workspace\"><a href=\"#overview\" aria-current=\"page\">Overview</a><a href=\"#beats\">Beats</a><a href=\"#orders\">Orders</a></nav>",
-      "css": ".ds-nav{background:#f2f2f5;padding:24px 16px;width:236px;font-family:var(--font-body,Inter),sans-serif;}.ds-nav a{display:flex;gap:13px;padding:11px 12px;min-height:43px;font-size:13px;font-weight:550;line-height:1.5;border-radius:9px;color:var(--muted,#63636f);text-decoration:none;transition:background-color 150ms ease,color 150ms ease}.ds-nav a[aria-current]{background:var(--ink,#202024);color:#fff}.ds-nav a:focus-visible{outline:2px solid var(--accent,#626270);outline-offset:4px}@media(hover:hover) and (pointer:fine){.ds-nav a:hover{background:#e6e6ec;color:var(--ink,#202024)}.ds-nav a[aria-current]:hover{background:#323238;color:#fff}}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
+      "css": ".ds-nav{font-family:var(--font-body,Inter),sans-serif;width:236px;background:#e1effc;padding:24px 16px}.ds-nav a{display:flex;align-items:center;min-height:43px;padding:11px 12px;border-radius:9px;color:#535862;font-size:13px;font-weight:550;text-decoration:none;transition:background-color 150ms ease}.ds-nav a[aria-current]{background:#181d27;color:#fff}.ds-nav a:focus-visible{outline:2px solid var(--accent,#0069e0);outline-offset:4px}@media(hover:hover) and (pointer:fine){.ds-nav a:hover{background:#e6e6ec;color:#181d27}.ds-nav a[aria-current]:hover{background:#323238;color:#fff}}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
     },
     {
-      "name": "Inactive Status",
+      "name": "Draft Status",
       "kind": "chip",
       "refersTo": "status-inactive",
-      "description": "Written draft state on a quiet neutral pill.",
+      "description": "Written state on a quiet neutral pill.",
       "html": "<span class=\"ds-status\">Draft</span>",
-      "css": ".ds-status{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-body,Inter),sans-serif;font-size:11px;font-weight:600;line-height:1.5;padding:4px 8px;border:1px solid var(--line,#e2e2e8);border-radius:6px;background:var(--surface-2,#f0f0f3);color:var(--muted,#63636f);white-space:nowrap}"
+      "css": ".ds-status{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-body,Inter),sans-serif;font-size:11px;font-weight:600;line-height:1.5;padding:4px 8px;border:1px solid var(--line,#dce6ef);border-radius:9999px;background:var(--surface-2,#f6f7f8);color:var(--muted,#535862)}"
     },
     {
       "name": "Working Panel",
       "kind": "card",
       "refersTo": "panel",
-      "description": "Flat bordered working container.",
-      "html": "<section class=\"ds-panel\"><header class=\"ds-panel-heading\"><div><h2>Recent orders</h2><p>Your latest licensed sales.</p></div></header></section>",
-      "css": ".ds-panel{background:var(--surface,#fff);color:var(--text,#202024);border:1px solid var(--line,#e2e2e8);border-radius:12px;overflow:hidden;box-shadow:none;font-family:var(--font-body,Inter),sans-serif;}.ds-panel-heading{padding:20px 22px}.ds-panel h2{margin:0;font-size:18px;font-weight:600;line-height:1.15;letter-spacing:-.03em}.ds-panel p{margin:6px 0 0;font-size:12px;line-height:1.5;color:var(--muted,#63636f)}"
+      "description": "Flat paper container for readable producer tasks.",
+      "html": "<section class=\"ds-panel\"><header class=\"ds-panel-heading\"><h2>Recent orders</h2><p>Your latest licensed sales.</p></header></section>",
+      "css": ".ds-panel{font-family:var(--font-body,Inter),sans-serif;background:var(--surface,#fafdff);color:var(--text,#0a0d12);border:0;border-radius:32px;overflow:hidden;box-shadow:none}.ds-panel-heading{padding:20px 22px}.ds-panel h2{margin:0;font-size:18px;font-weight:500;line-height:1.15;letter-spacing:-.02em}.ds-panel p{margin:6px 0 0;font-size:12px;line-height:1.5;color:var(--muted,#535862)}@media(max-width:760px){.ds-panel{border-radius:24px}}"
     },
     {
-      "name": "Background Control",
+      "name": "Release Card Caption",
+      "kind": "card",
+      "refersTo": "release-card",
+      "description": "Paper release container and license pill, excerpted without artwork or runtime audio.",
+      "html": "<article class=\"ds-release\"><div><h3>eyesight</h3><p>142 BPM · F♯ minor</p></div><a href=\"#licenses\" aria-label=\"View licenses for eyesight\">From $19.99 ↗</a></article>",
+      "css": ".ds-release{font-family:var(--font-body,Inter),sans-serif;display:flex;align-items:center;justify-content:space-between;gap:8px;max-width:350px;min-width:0;background:#fafdff;color:#0a0d12;border-radius:32px;padding:16px 16px 20px}.ds-release h3{font-size:18px;font-weight:500;margin:0;letter-spacing:-.02em}.ds-release p{font-size:11px;color:#535862;margin:4px 0 0}.ds-release a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 12px;border-radius:9999px;background:#edf4fb;color:#0a0d12;font-size:11px;text-decoration:none}.ds-release a:focus-visible{outline:2px solid var(--accent,#0069e0);outline-offset:4px}@media(hover:hover) and (pointer:fine){.ds-release a:hover{background:#e1eefd}}"
+    },
+    {
+      "name": "Preview Control",
       "kind": "button",
-      "refersTo": "background-control",
-      "description": "Visible shader pause control; runtime behavior belongs to the app.",
-      "html": "<button class=\"ds-motion\" aria-pressed=\"false\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M8 5v14M16 5v14\"/></svg>Pause background</button>",
-      "css": ".ds-motion{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:8px 12px;border:1px solid #ffffff16;border-radius:7px;background:#141416;color:var(--stage-muted,#a1a1aa);font-family:var(--font-body,Inter),sans-serif;font-size:10px;cursor:pointer}.ds-motion:focus-visible{outline:2px solid var(--accent,#626270);outline-offset:4px}.ds-motion:active{transform:scale(.97)}@media(hover:hover) and (pointer:fine){.ds-motion:hover{color:var(--stage-text,#f4f4f5);border-color:#a1a1aa80}}"
-    },
-    {
-      "name": "Perspective Window Chrome",
-      "kind": "custom",
-      "refersTo": "showcase-window",
-      "description": "Actual homepage window shell and chrome, shown here without the runtime catalog or player. Full hero uses a linked demo workspace behind the playable demo storefront.",
-      "html": "<section class=\"ds-window\" aria-label=\"Demo storefront window\"><div class=\"ds-window-bar\"><span class=\"ds-window-dots\" aria-hidden=\"true\"><i></i><i></i><i></i></span><span>/ziova</span><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6\"/></svg></div></section>",
-      "css": ".ds-window{border:1px solid #ffffff24;border-radius:16px;overflow:hidden;background:#141416;color:#f4f4f5;box-shadow:0 28px 60px #0008;font-family:var(--font-body,Inter),sans-serif}.ds-window-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:38px;padding:0 15px;background:#1b1b1f;border-bottom:1px solid #ffffff10;color:#b2b2bd;font-size:10px}.ds-window-dots{display:flex;gap:5px}.ds-window-dots i{width:6px;height:6px;border-radius:50%;background:#65656f}"
+      "refersTo": "play-button",
+      "description": "Isolated preview button; actual audio state is provided by the app.",
+      "html": "<button class=\"ds-play\" aria-label=\"Play eyesight preview\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7Z\"/></svg></button>",
+      "css": ".ds-play{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border:0;border-radius:50%;background:#fff;color:#181d27;box-shadow:0 5px 16px #0003;cursor:pointer;transition:transform 120ms cubic-bezier(.23,1,.32,1),background-color 150ms ease}.ds-play:focus-visible{outline:2px solid var(--accent,#0069e0);outline-offset:4px}.ds-play:active{transform:scale(.95)}.ds-play[aria-pressed=\"true\"]{background:#cce7ff}@media(hover:hover) and (pointer:fine){.ds-play:hover{background:#cce7ff}}@media(prefers-reduced-motion:reduce){.ds-play{transition:none}}"
     }
   ],
   "narrative": {
-    "northStar": "Clean creator platform",
-    "overview": "Trakko uses a quiet creator-platform identity: charcoal marketing surfaces, white actions, muted gray reading, and regular-width Inter throughout. Music supplies the visual character through actual release artwork and playable previews. The user-selected guns.lol reference informs compact navigation, centered introduction, and overlapping perspective windows in the homepage hero; the confirmed adaptation uses fewer colors and cleaner presentation.\n\nProducer workflows remain neutral and light, with direct controls, readable tables, and flat panels. Producer storefront themes and accents remain producer-owned. The earlier green Studio palette and condensed typography are superseded; atmosphere is now a subdued monochrome field behind marketing only.",
+    "northStar": "Daylight notebook",
+    "overview": "Trakko feels like a generous daylight studio: pale sky surrounds paper surfaces, near-black type sets the hierarchy, and charcoal pill actions give the interface a clear point of emphasis. Medium-weight, regular-width Inter connects expressive marketing with practical producer tools. Soft lavender, peach, and powder-blue washes add warmth without competing with music.\n\nThe user-supplied Geniestudio reference governs this system across marketing, dashboard, authentication, and the default light storefront. Trakko adapts it with locally served Inter in place of Aeonik/Geist, an original transparent music illustration, real playable demo releases, and lavender/peach/powder-blue instead of mint. Producer-selected dark themes and custom accents retain their own surface and contrast tokens.",
     "keyCharacteristics": [
-      "Regular-width Inter for both display and working UI.",
-      "Charcoal marketing and neutral light working screens.",
-      "Actual release artwork, preview controls, and one persistent player.",
-      "Restrained, pausable monochrome atmosphere with static fallback.",
-      "Flat working panels, a perspective-window homepage showcase, and clear keyboard focus."
+      "Pale sky canvas and paper cards with tonal, mostly flat depth.",
+      "Regular-width Inter at weight 500 for display and principal headings.",
+      "Generous rounded cards, pill actions, and clearly labeled native fields.",
+      "Original soft 3D music imagery alongside genuine release artwork and playback.",
+      "Producer-owned storefront themes, readable task screens, and explicit demo states."
     ],
     "rules": [
       {
         "name": "The Surface Ownership Rule",
-        "body": "Keep platform marketing monochrome and producer workflows neutral light; preserve producer-owned storefront theme and accent.",
+        "body": "Apply daylight to platform and default light surfaces; preserve producer-selected dark themes and custom accents through their scoped tokens.",
         "section": "colors"
       },
       {
-        "name": "The One Typeface Rule",
-        "body": "Use regular-width Inter for both display and body. Do not restore condensed release lettering.",
+        "name": "The Medium Voice Rule",
+        "body": "Use locally served regular-width Inter at weight 500 for display and principal headings. Preserve compact label emphasis where the working UI uses it.",
         "section": "typography"
       },
       {
-        "name": "The Working Surface Rule",
-        "body": "Keep working panels flat at rest. Reserve diffuse shadows for dialogs, authentication cards, the persistent player, and the homepage showcase windows.",
+        "name": "The Paper Depth Rule",
+        "body": "Separate content cards from the canvas with tone and rounded shape. Keep ordinary panels flat; use shadows only for controls, overlays, and the persistent player.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do use regular-width Inter and the extracted neutral platform tokens.",
-      "Do preserve real artwork, clear preview controls, and a single persistent player.",
-      "Do keep visible keyboard focus, explicit status wording, and coarse-pointer input sizing.",
-      "Do keep background atmosphere bounded, pausable, and readable with a static fallback.",
-      "Do preserve the producer’s selected storefront theme and accent.",
-      "Do label demo releases, simulated purchases, and illustrative figures clearly.",
-      "Do preserve real playback and license links within the perspective hero, with immediate keyboard flattening and a static reduced-motion layout."
+      "Do use the sky canvas, paper cards, charcoal actions, and blue link/focus accents.",
+      "Do use local Inter, with weight 500 and tight tracking for principal headings.",
+      "Do preserve real artwork, actual preview controls, accurate prices, and one persistent player.",
+      "Do keep keyboard focus, explicit field labels, native shelf scrolling, and reduced-motion behavior.",
+      "Do retain producer-selected themes and accents.",
+      "Do label demos and simulated purchases and state the 8% sales fee with separate processing charges.",
+      "Do keep exact prompts and generation provenance beside shipping generated artwork."
     ],
     "donts": [
-      "Don’t restore green marketing fields or condensed typography.",
-      "Don’t add oversized decorative footer lettering.",
-      "Don’t introduce borrowed adoption claims, gun motifs, or third-party source-copy claims.",
-      "Don’t apply background shaders or delayed headline choreography to producer task screens.",
-      "Don’t freeze transient control feedback when the background is paused.",
-      "Don’t promote remaining localized legacy accents into the new brand palette."
+      "Don’t restore the charcoal marketing stage, background shader, or slanted browser-window hero.",
+      "Don’t restore green/mint branding or condensed display lettering.",
+      "Don’t use blue as the platform’s primary button fill or gradients as large decorative surfaces.",
+      "Don’t add shadows to ordinary content cards or introduce sharp corners as the main shape language.",
+      "Don’t borrow customer claims, testimonials, adoption figures, or third-party illustration assets.",
+      "Don’t apply marketing headline choreography or oversized display type to producer task screens."
     ]
   }
 }

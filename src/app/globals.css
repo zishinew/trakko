@@ -6303,420 +6303,737 @@ html {
   border-color: #e2e2e8;
 }
 
-/* User-requested perspective windows: live music in front, producer workspace behind. */
-.clean-catalog .studio-intro {
-  padding-bottom: 30px;
+/* Daylight notebook — user-supplied Geniestudio reference, October 2026. */
+:root {
+  --bg: #ebf5ff;
+  --surface: #fafdff;
+  --surface-2: #f6f7f8;
+  --line: #dce6ef;
+  --text: #0a0d12;
+  --muted: #535862;
+  --accent: #0069e0;
+  --ink: #181d27;
+  --paper: #fafdff;
+  --mint: #ebf5ff;
+  --mint-strong: #cce7ff;
+  --shadow-overlay: 0 24px 80px #04459018;
 }
-.hero-showcase {
-  max-width: 1060px;
-  margin: 0 auto;
-  padding-top: 8px;
+html {
+  scrollbar-color: #b8cce0 transparent;
 }
-.showcase-scene {
-  position: relative;
-  height: 620px;
-  perspective: 1600px;
+body {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'case';
 }
-.showcase-window {
-  position: absolute;
-  border: 1px solid #ffffff24;
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.button,
+.icon-button,
+.filter-chip {
+  border-radius: 9999px;
+  font-weight: 500;
+}
+.button {
+  padding: 12px 24px;
+}
+.button.primary {
+  background: #181d27;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 1px 2px #0a0d121f;
+}
+.button.secondary {
+  background: #fafdff;
+  color: #181d27;
+  border-color: #dce6ef;
+}
+input,
+textarea,
+select {
   border-radius: 16px;
-  overflow: hidden;
-  background: #141416;
-  color: #f4f4f5;
-  box-shadow: 0 28px 60px #0008;
+  background: #fafdff;
+}
+.panel,
+.auth-card,
+.featured-beat,
+.store-promo,
+.setup-guide,
+.free-plan {
+  border-radius: 32px;
+}
+.panel {
+  background: #fafdff;
+  border-color: transparent;
+  box-shadow: none;
+}
+.modal {
+  border-radius: 32px;
+  background: #fff;
+}
+.sidebar {
+  background: #e1effc;
+  border-color: transparent;
+}
+.sidebar nav .sidebar-label {
+  color: #535862;
+  font-weight: 500;
+}
+.sidebar nav a.active {
+  background: #181d27;
+}
+.dashboard-main h1,
+.page-heading h1 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.dashboard-topbar {
+  background: #fafdff;
+  border-color: transparent;
+}
+.setup-guide {
+  background: #e5eaff;
+}
+.setup-step {
+  border-radius: 16px;
+  border-color: transparent;
+}
+.setup-step > span {
+  background: #e8ecfb;
+  color: #535862;
+}
+.stats-grid {
+  border-radius: 24px;
+  background: #fafdff;
+  border-color: transparent;
+}
+.stat-card {
+  background: transparent;
+}
+.stat-card > strong {
+  font-weight: 500;
+}
+.free-plan {
+  background: #cce7ff;
+}
+.store-promo {
+  background: #f1e6ff;
+  color: #0a0d12;
+}
+.store-promo p {
+  color: #535862;
+}
+.store-promo .accent {
+  color: #0a0d12;
+}
+.store-promo .store-url {
+  background: #fafdff;
+  border-color: transparent;
+  color: #535862;
+  border-radius: 16px;
+}
+.auth-page,
+.onboarding-page {
+  background: #ebf5ff;
+}
+.auth-card {
+  box-shadow: none;
+  background: #fafdff;
+}
+.auth-card h1 {
+  font-weight: 500;
+}
+.store-top {
+  background: #fafdff;
+  border-color: transparent;
+}
+.featured-beat {
+  background: #fafdff;
+}
+.storefront .producer-intro h1 {
+  font-weight: 500;
+}
+.storefront .section-heading h2 {
+  font-weight: 500;
+}
+.tag-filters button,
+.status-pill,
+.beat-tags > span {
+  border-radius: 9999px;
+}
+.tag-filters button {
+  background: var(--surface);
+  border-color: transparent;
+}
+.tag-filters button.selected {
+  background: var(--text);
+  color: var(--surface);
+}
+.buy-button,
+.featured-buy {
+  border-radius: 9999px;
+}
+.beat-card {
+  border-radius: 24px;
+}
+.persistent-player {
+  background: var(--surface);
+  border-color: var(--line);
+}
+.daylight-catalog {
+  background: #ebf5ff;
+  color: #0a0d12;
+  display: flow-root;
+  color-scheme: light;
+}
+.daylight-catalog > main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 32px;
+}
+.daylight-catalog .landing-nav {
+  max-width: 1200px;
+  height: 100px;
+  margin: auto;
+  padding: 0 32px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.daylight-catalog .landing-nav .logo,
+.daylight-catalog .landing-nav .logo-period {
+  color: #0a0d12;
+}
+.daylight-catalog .landing-nav nav {
+  font-size: 14px;
+  font-weight: 500;
+  gap: 32px;
+}
+.daylight-catalog .landing-nav nav > a:first-child {
+  color: #535862;
+}
+.daylight-catalog .landing-nav .button.primary {
+  color: #fff;
+  background: #181d27;
+  padding: 12px 24px;
+}
+.daylight-catalog .label-masthead {
+  padding: 0;
+}
+.daylight-catalog .studio-intro {
+  text-align: center;
+  max-width: none;
+  margin: auto;
+  padding: 48px 0 80px;
+}
+.daylight-catalog .studio-intro h1 {
+  font-size: clamp(72px, 10.3vw, 148px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 auto 24px;
+  max-width: 1120px;
+}
+.daylight-catalog .title-line {
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+}
+.daylight-catalog .title-line > span {
+  animation: daylight-title 650ms var(--ease-out) backwards;
+  color: #0a0d12;
+}
+.daylight-catalog .title-line:last-child > span {
+  animation-delay: 80ms;
+}
+@keyframes daylight-title {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.daylight-intro-copy {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #535862;
+  max-width: 64ch;
+  margin: 0 auto;
+}
+.daylight-hero-art {
+  width: 380px;
+  height: 270px;
+  margin: 16px auto 24px;
+}
+.daylight-hero-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.daylight-catalog .masthead-action {
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+}
+.daylight-catalog .masthead-action .button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 32px;
+  min-height: 52px;
+}
+.daylight-catalog .masthead-action > span {
+  font-size: 12px;
+  color: #535862;
+}
+.daylight-demo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #0069e0;
+  padding: 4px;
+}
+.daylight-section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.daylight-section-heading h2 {
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.daylight-section-heading p {
+  color: #535862;
+  font-size: 17px;
+  margin: 20px auto 0;
+  max-width: 65ch;
+}
+.daylight-releases {
+  max-width: none;
+  margin: 0;
+  padding: 40px 0 80px;
+}
+.daylight-catalog .release-shelf {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.daylight-catalog .release-tile {
+  background: #fafdff;
+  border-radius: 32px;
+  padding: 16px 16px 20px;
+  min-width: 0;
+}
+.daylight-catalog .release-art {
+  aspect-ratio: 1.2;
+  border-radius: 24px;
+}
+.daylight-catalog .release-art > img {
   transition: transform 500ms var(--ease-out);
 }
-.showcase-workspace {
-  width: 57%;
-  left: 0;
-  top: 46px;
-  transform: rotateX(8deg) rotateY(13deg) rotateZ(-7deg);
-  animation: workspace-settle 800ms var(--ease-out) backwards;
+.daylight-catalog .release-art .play-button {
+  width: 48px;
+  height: 48px;
+  color: #181d27;
+  background: #fff;
+  right: 16px;
+  bottom: 16px;
 }
-.showcase-store {
-  width: 63%;
-  right: 0;
-  top: 66px;
-  z-index: 2;
-  transform: rotateX(7deg) rotateY(-13deg) rotateZ(6deg);
-  animation: store-settle 800ms 80ms var(--ease-out) backwards;
+.daylight-catalog .release-art .play-button.active {
+  background: #cce7ff;
 }
-@keyframes workspace-settle {
-  from {
-    opacity: 0.2;
-    transform: translateX(-35px) translateY(22px) rotateX(13deg) rotateY(18deg) rotateZ(-10deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotateX(8deg) rotateY(13deg) rotateZ(-7deg);
-  }
-}
-@keyframes store-settle {
-  from {
-    opacity: 0.2;
-    transform: translateX(35px) translateY(30px) rotateX(12deg) rotateY(-18deg) rotateZ(10deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotateX(7deg) rotateY(-13deg) rotateZ(6deg);
-  }
-}
-.showcase-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 38px;
-  padding: 0 15px;
-  background: #1b1b1f;
-  border-bottom: 1px solid #ffffff10;
-  color: #b2b2bd;
-  font-size: 10px;
-}
-.showcase-dots {
-  display: flex;
-  gap: 5px;
-}
-.showcase-dots i {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #65656f;
-}
-.showcase-workspace-body {
-  display: grid;
-  grid-template-columns: 55px 1fr;
-  min-height: 330px;
-}
-.showcase-sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 29px;
-  padding-top: 25px;
-  background: #18181b;
-  border-right: 1px solid #ffffff0d;
-  color: #858590;
-}
-.showcase-sidebar svg:first-child {
-  color: #e4e4e8;
-  margin-bottom: 12px;
-}
-.showcase-catalog {
-  padding: 25px 26px 20px;
-}
-.showcase-catalog-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-.showcase-catalog-heading strong {
-  display: block;
-  font-size: 18px;
-  font-weight: 600;
-}
-.showcase-catalog-heading > div > span {
-  display: block;
-  font-size: 10px;
-  color: #a1a1aa;
-  margin-top: 4px;
-}
-.showcase-upload {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  padding: 7px 9px;
-  border-radius: 6px;
-  background: #e8e8ed;
-  color: #202024;
-  font-size: 10px;
-}
-.showcase-table-head {
-  display: grid;
-  grid-template-columns: 1fr 45px 68px;
-  gap: 8px;
-  margin-top: 23px;
-  padding-bottom: 10px;
-  font-size: 9px;
-  color: #a1a1aa;
-}
-.showcase-catalog-row {
-  display: grid;
-  grid-template-columns: 30px 1fr 45px 68px;
+.daylight-catalog .release-caption {
+  padding: 20px 4px 0;
   align-items: center;
   gap: 8px;
-  border-top: 1px solid #ffffff0d;
-  padding: 10px 0;
-  font-size: 10px;
 }
-.showcase-catalog-row img {
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
-}
-.showcase-catalog-row > span:nth-last-child(2) {
-  color: #a1a1aa;
-  font-variant-numeric: tabular-nums;
-}
-.showcase-published {
-  font-size: 9px;
-  color: #c4c4cc;
-}
-.showcase-workspace-link {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 10px;
-  color: #b2b2bd;
-  font-size: 10px;
-}
-.showcase-store-content {
-  padding: 22px;
-}
-.showcase-producer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.showcase-producer > img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-}
-.showcase-producer strong {
-  display: block;
+.daylight-catalog .release-caption h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
 }
-.showcase-producer span {
-  display: block;
-  font-size: 9px;
-  color: #a1a1aa;
-  margin-top: 2px;
+.daylight-catalog .release-caption p {
+  color: #535862;
+  font-size: 11px;
 }
-.showcase-producer > a {
-  margin-left: auto;
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border: 1px solid #ffffff1c;
-  border-radius: 8px;
-}
-.clean-catalog .showcase-store .release-heading {
-  padding: 22px 0 14px;
-}
-.clean-catalog .showcase-store .release-heading h2 {
-  font-size: 13px;
-  color: #e4e4e8;
-}
-.showcase-store .release-heading > span {
-  color: #a1a1aa;
-  font-size: 10px;
-}
-.clean-catalog .showcase-store .release-shelf {
-  gap: 13px;
-}
-.clean-catalog .showcase-store .release-art {
-  aspect-ratio: 1.25;
-  border-radius: 8px;
-}
-.clean-catalog .showcase-store .release-art .play-button {
-  width: 36px;
-  height: 36px;
-  min-height: 36px;
-  right: 8px;
-  bottom: 8px;
-}
-.clean-catalog .showcase-store .release-art .play-button svg {
-  width: 16px;
-  height: 16px;
-}
-.clean-catalog .showcase-store .release-caption {
-  display: block;
-  padding-top: 10px;
-}
-.clean-catalog .showcase-store .release-caption h3 {
-  font-size: 13px;
-}
-.clean-catalog .showcase-store .release-caption p {
-  font-size: 9px;
-  margin-top: 3px;
-  white-space: nowrap;
-}
-.clean-catalog .showcase-store .release-caption > a {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 9px;
-  font-size: 10px;
-  margin-top: 10px;
-  min-height: 36px;
-  border-radius: 7px;
-}
-.showcase-store-footer {
+.daylight-catalog .release-caption > a {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 19px;
-  padding-top: 12px;
-  border-top: 1px solid #ffffff10;
-  font-size: 9px;
-  color: #a1a1aa;
+  justify-content: center;
+  gap: 5px;
+  min-height: 44px;
+  padding: 0 12px;
+  background: #edf4fb;
+  border: 0;
+  border-radius: 9999px;
+  font-size: 11px;
+  color: #0a0d12;
 }
-.showcase-store-footer > span:last-child {
-  margin-left: auto;
+.daylight-release-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 24px;
+  color: #535862;
+  font-size: 11px;
 }
-.showcase-disclaimer {
+.daylight-release-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: #0069e0;
+}
+.daylight-catalog .landing-bottom {
+  display: block;
+  margin: 0;
+  padding: 56px 40px;
+  background: #fafdff;
+  border-radius: 32px;
+  color: #0a0d12;
+}
+.daylight-catalog .landing-bottom > div:first-child {
   text-align: center;
-  color: #a1a1aa;
-  font-size: 10px;
-  line-height: 1.7;
-  margin: 14px 0 0;
 }
-.showcase-window:focus-within {
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  z-index: 3;
-  transition: none;
+.daylight-catalog .landing-bottom h2 {
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.17;
+}
+.daylight-catalog .section-description {
+  font-size: 16px;
+  color: #535862;
+  margin-top: 20px;
+}
+.daylight-catalog .landing-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+.daylight-catalog .landing-steps > div {
+  border: 0;
+  padding: 0;
+}
+.daylight-catalog .landing-steps svg {
+  color: #0069e0;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 20px;
+}
+.daylight-catalog .landing-steps h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.daylight-catalog .landing-steps p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #535862;
+  margin-top: 12px;
+}
+.daylight-catalog .label-business {
+  display: block;
+  padding: 80px 0;
+}
+.daylight-catalog .business-title {
+  text-align: center;
+}
+.daylight-catalog .business-title h2 {
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.17;
+}
+.daylight-catalog .business-title .button {
+  color: #fff;
+  background: #181d27;
+  border: 0;
+  margin-top: 28px;
+}
+.daylight-catalog .business-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.daylight-catalog .business-list > div {
+  padding: 32px;
+  border: 0;
+  border-radius: 32px;
+  background: #f1e6ff;
+}
+.daylight-catalog .business-list > div:nth-child(2) {
+  background: #ffecdf;
+}
+.daylight-catalog .business-list > div:last-child {
+  background: #fafdff;
+}
+.daylight-catalog .business-list dt {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.daylight-catalog .business-list dd {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 16px;
+  color: #535862;
+}
+.daylight-catalog .label-pricing {
+  display: block;
+  margin: 0 0 64px;
+  padding: 64px 40px;
+  border: 0;
+  border-radius: 32px;
+  background: #cce7ff;
+  color: #0a0d12;
+  text-align: center;
+}
+.daylight-catalog .label-pricing h2 {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.11;
+}
+.daylight-catalog .label-pricing > div > p {
+  color: #535862;
+  font-size: 16px;
+  max-width: 56ch;
+  margin: 24px auto 0;
+}
+.daylight-catalog .label-pricing > div:last-child p {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 16px 0;
+  font-size: 13px;
+}
+.daylight-catalog .label-pricing .button {
+  display: flex;
+  width: fit-content;
+  margin: 32px auto 0;
+  background: #181d27;
+  color: #fff;
+  border-color: transparent;
+  padding: 14px 32px;
+  font-size: 16px;
+}
+.daylight-catalog .landing-footer {
+  max-width: 1200px;
+  padding: 0 32px 40px;
+  color: #535862;
+  font-size: 12px;
+  border: 0;
+}
+.daylight-catalog .landing-footer .logo {
+  color: #0a0d12;
 }
 @media (hover: hover) and (pointer: fine) {
-  .showcase-workspace:hover {
-    transform: translateY(-6px) rotateX(4deg) rotateY(7deg) rotateZ(-4deg);
+  .button.primary:hover,
+  .daylight-catalog .landing-nav .button.primary:hover,
+  .daylight-catalog .label-pricing .button:hover,
+  .daylight-catalog .business-title .button:hover {
+    background: #303743;
+    color: #fff;
   }
-  .showcase-store:hover {
-    transform: translateY(-6px) rotateX(3deg) rotateY(-7deg) rotateZ(3deg);
+  .daylight-catalog .release-art:hover > img {
+    transform: scale(1.035);
   }
-  .showcase-window:focus-within:hover {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  .daylight-catalog .release-caption > a:hover {
+    background: #e1eefd;
   }
 }
 @media (max-width: 1000px) and (min-width: 761px) {
-  .showcase-scene {
-    height: 570px;
+  .daylight-catalog .release-caption {
+    display: block;
   }
-  .showcase-store {
-    width: 67%;
+  .daylight-catalog .release-caption > a {
+    margin-top: 12px;
   }
-  .showcase-workspace {
-    width: 64%;
-  }
-  .showcase-catalog {
-    padding: 20px 15px;
-  }
-  .showcase-upload {
-    display: none;
-  }
-  .showcase-store-content {
-    padding: 17px;
+  .daylight-catalog .business-list > div {
+    padding: 24px;
   }
 }
 @media (max-width: 760px) {
-  .clean-catalog .studio-intro {
-    padding-bottom: 25px;
+  .dashboard-main h1,
+  .page-heading h1 {
+    font-size: 30px;
   }
-  .hero-showcase {
-    padding-top: 0;
+  .panel,
+  .auth-card,
+  .featured-beat,
+  .store-promo,
+  .setup-guide,
+  .free-plan {
+    border-radius: 24px;
   }
-  .showcase-scene {
-    height: 600px;
-    perspective: 1200px;
+  .daylight-catalog > main {
+    padding: 0 20px;
   }
-  .showcase-workspace {
-    width: 90%;
-    left: 0;
-    top: 20px;
-    transform: rotateZ(-5deg);
-    animation: none;
+  .daylight-catalog .landing-nav {
+    height: 84px;
+    padding: 0 20px;
   }
-  .showcase-workspace-body {
-    min-height: 125px;
-    grid-template-columns: 35px 1fr;
+  .daylight-catalog .landing-nav nav {
+    gap: 16px;
   }
-  .showcase-sidebar {
-    gap: 14px;
-    padding-top: 16px;
+  .daylight-catalog .landing-nav nav > .button {
+    padding: 10px 16px;
+    font-size: 11px;
   }
-  .showcase-sidebar svg {
-    width: 14px;
+  .daylight-catalog .studio-intro {
+    padding: 36px 0 56px;
   }
-  .showcase-sidebar svg:nth-child(n + 3) {
+  .daylight-catalog .studio-intro h1 {
+    font-size: clamp(46px, 12.4vw, 72px);
+    line-height: 1.08;
+  }
+  .daylight-intro-copy {
+    font-size: 14px;
+    line-height: 1.65;
+    max-width: 37ch;
+  }
+  .daylight-intro-copy br {
     display: none;
   }
-  .showcase-catalog {
-    padding: 15px;
+  .daylight-hero-art {
+    width: 280px;
+    height: 230px;
+    margin: 12px auto 20px;
   }
-  .showcase-catalog-heading strong {
+  .daylight-catalog .masthead-action .button {
+    font-size: 14px;
+    min-height: 48px;
+    padding: 12px 24px;
+  }
+  .daylight-section-heading {
+    margin-bottom: 28px;
+  }
+  .daylight-section-heading h2 {
+    font-size: 40px;
+  }
+  .daylight-section-heading p {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  .daylight-releases {
+    padding: 24px 0 48px;
+  }
+  .daylight-catalog .release-shelf {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 8px;
+  }
+  .daylight-catalog .release-tile {
+    flex: 0 0 88%;
+    scroll-snap-align: start;
+    padding: 16px;
+    border-radius: 32px;
+  }
+  .daylight-catalog .release-art {
+    aspect-ratio: 1.2;
+  }
+  .daylight-catalog .release-caption h3 {
+    font-size: 17px;
+  }
+  .daylight-catalog .release-caption > a {
+    min-width: 94px;
+  }
+  .daylight-release-footer {
+    display: block;
+    line-height: 1.7;
+    margin-top: 16px;
+  }
+  .daylight-release-footer a {
+    margin-top: 8px;
+  }
+  .daylight-catalog .landing-bottom {
+    padding: 36px 24px;
+  }
+  .daylight-catalog .landing-bottom h2,
+  .daylight-catalog .business-title h2 {
+    font-size: 34px;
+  }
+  .daylight-catalog .landing-steps {
+    display: block;
+    margin-top: 32px;
+  }
+  .daylight-catalog .landing-steps > div + div {
+    margin-top: 28px;
+  }
+  .daylight-catalog .business-list {
+    display: block;
+    margin-top: 32px;
+  }
+  .daylight-catalog .business-list > div {
+    padding: 32px;
+  }
+  .daylight-catalog .business-list > div + div {
+    margin-top: 16px;
+  }
+  .daylight-catalog .label-business {
+    padding: 48px 0;
+  }
+  .daylight-catalog .label-pricing {
+    padding: 40px 24px;
+    margin-bottom: 40px;
+  }
+  .daylight-catalog .label-pricing h2 {
+    font-size: 40px;
+  }
+  .daylight-catalog .label-pricing > div > p {
     font-size: 14px;
   }
-  .showcase-catalog-heading > div > span {
-    font-size: 9px;
-  }
-  .showcase-upload,
-  .showcase-table-head,
-  .showcase-catalog-row,
-  .showcase-workspace-link {
-    display: none;
-  }
-  .showcase-store {
-    width: 95%;
-    right: 0;
-    top: 115px;
-    transform: rotateZ(3deg);
-    animation: none;
-  }
-  .showcase-store-content {
-    padding: 16px;
-  }
-  .showcase-producer span {
-    font-size: 8px;
-    max-width: 24ch;
-  }
-  .clean-catalog .showcase-store .release-heading {
-    padding-top: 18px;
-  }
-  .clean-catalog .showcase-store .release-shelf {
-    gap: 14px;
-  }
-  .clean-catalog .showcase-store .release-tile {
-    flex-basis: 82%;
-  }
-  .clean-catalog .showcase-store .release-art {
-    aspect-ratio: 1.65;
-  }
-  .clean-catalog .showcase-store .release-art .play-button {
-    width: 44px;
-    height: 44px;
-    min-height: 44px;
-  }
-  .clean-catalog .showcase-store .release-caption {
+  .daylight-catalog .label-pricing > div:last-child p {
     display: flex;
+    margin: 20px 0 0;
+    text-align: left;
   }
-  .clean-catalog .showcase-store .release-caption > a {
-    margin-top: 0;
-    min-height: 44px;
-    min-width: 85px;
-  }
-  .showcase-store-footer > span:last-child {
-    display: none;
-  }
-  .showcase-store-footer {
-    margin-top: 13px;
-  }
-  .showcase-disclaimer {
-    max-width: 37ch;
-    margin: 18px auto 0;
+  .daylight-catalog .landing-footer {
+    padding: 0 20px 32px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .showcase-window {
+  .daylight-catalog .title-line > span {
     animation: none;
+  }
+  .daylight-catalog .release-art > img {
     transition: none;
   }
-  .showcase-workspace,
-  .showcase-store,
-  .showcase-workspace:hover,
-  .showcase-store:hover {
-    transform: none;
-  }
+}
+/* Producer-selected dark themes retain their own surface and contrast tokens. */
+.storefront.theme-light {
+  --bg: #ebf5ff;
+  --surface: #fafdff;
+  --surface-2: #f6f7f8;
+  --line: #dce6ef;
+  --text: #0a0d12;
+  --muted: #535862;
+}
+.storefront .store-top,
+.storefront .featured-beat {
+  background: var(--surface);
+}
+.panel-heading h2,
+.store-promo h2,
+.section-heading h2,
+.onboarding-layout h1 {
+  font-weight: 500;
+}
+.store-promo h2 .accent {
+  color: #0a0d12;
+}
+.storefront.theme-dark .featured-buy {
+  color: var(--text);
 }
