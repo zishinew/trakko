@@ -57,6 +57,8 @@ All 14 application tables have RLS enabled. `preview-assets` is public for previ
 
 The local app origin and Auth Site URL are `http://localhost:3000`; the three exact callbacks below are allowlisted. Email/password signup is enabled. No wildcard callbacks, seeded producer accounts, or payment credentials are added by this setup. Configure production SMTP and production HTTPS callbacks before public launch.
 
+Live integration verification completed against this project: server-key authentication, real email/password login through Trakko, session cookies, store onboarding/default licenses, draft beat creation, authenticated dashboard loading, signed preview/private MP3 uploads and finalization, public preview retrieval, unsigned private-file denial, signed private-file retrieval, and logout. The temporary test producer, store, beat, license rows, upload records, and Storage objects were removed afterward. This verified the configured local app against Supabase Cloud; external confirmation-email delivery, production hosting, and Stripe payments are separate launch checks.
+
 Local credentials live only in ignored `.env.local`, with owner-only file permissions. Public URL/key configuration disables demo mode. Set `SUPABASE_SECRET_KEY` from the project's existing secret keys to enable server-side storage, analytics, and fulfillment; the plugin exposes publishable keys only. A dedicated receipt encryption key is generated locally and must remain stable. Never commit this file or copy its contents into issue reports.
 
 ### Local stack
