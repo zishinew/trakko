@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('motion controls and account navigation fit narrow phones', async ({ page }) => {
+test('removed buttons stay absent and account navigation fits narrow phones', async ({ page }) => {
   for (const width of [320, 390]) {
     await page.setViewportSize({ width, height: 844 });
     await page.goto('/');
@@ -12,28 +12,21 @@ test('motion controls and account navigation fit narrow phones', async ({ page }
     expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(
       false,
     );
-    await page.getByRole('button', { name: 'Pause visual effects' }).click();
-    await expect(page.getByRole('button', { name: 'Resume visual effects' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Pause visual effects' })).toHaveCount(0);
+    await expect(page.getByRole('group', { name: 'Choose a demo track' })).toHaveCount(0);
   }
 });
 
-test('both shaders render and the shared pause control freezes effects without stopping audio', async ({
-  page,
-}) => {
+test('both shaders render and stop offscreen while audio remains usable', async ({ page }) => {
   await page.goto('/');
   const flow = page.locator('.shader-flow');
   const ripple = page.locator('.shader-ripple');
   await expect(flow).toHaveAttribute('data-render-state', 'running');
-  await page.getByRole('button', { name: 'Pause visual effects' }).click();
-  await expect(flow).toHaveAttribute('data-render-state', 'paused');
-  await expect(ripple).toHaveAttribute('data-render-state', 'paused');
   await page.locator('.signal-stage').hover();
   await page.getByRole('button', { name: 'Play hero preview: eyesight', exact: true }).click();
   await expect(
     page.getByRole('button', { name: 'Pause hero preview: eyesight', exact: true }),
   ).toBeVisible();
-  await expect(flow).toHaveAttribute('data-render-state', 'paused');
-  await page.getByRole('button', { name: 'Resume visual effects' }).click();
   await expect(flow).toHaveAttribute('data-render-state', 'running');
   await ripple.scrollIntoViewIfNeeded();
   await expect(ripple).toHaveAttribute('data-render-state', 'running');
@@ -44,7 +37,6 @@ test('reduced motion renders static shaders and keeps controls usable', async ({
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
   await expect(page.locator('.shader-flow')).toHaveAttribute('data-render-state', 'reduced');
-  await expect(page.getByRole('button', { name: 'Reduced motion enabled' })).toBeDisabled();
   expect(
     await page.locator('.signal-drift').evaluate((el) => getComputedStyle(el).animationName),
   ).toBe('none');

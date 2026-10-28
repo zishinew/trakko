@@ -250,17 +250,17 @@ Fine-pointer artwork hover scales to 1.035 over 500ms; catalog artwork uses the 
 
 `SignalDeck` replaces the removed generated illustration with an original React/CSS player. Its paper stack adapts the interaction ideas researched at Aceternity 3D Card, Componentry Orbit Card Stack, and 21st.dev WaveformPlayer; no third-party component source is copied and no new runtime dependency is installed.
 
-The console uses the shared player, three real demo tracks, and 64 RMS waveform samples per track derived from the corresponding MP3. A native range input provides keyboard and pointer seeking. Track buttons expose their selection with aria-pressed. Selecting a track during playback switches audio; otherwise it changes the selected preview without autoplay.
+The console uses the shared player, three real demo tracks, and 64 RMS waveform samples per track derived from the corresponding MP3. A native range input provides keyboard and pointer seeking. The hero follows the currently playing demo release; the release cards below provide track selection. There are no selector buttons beneath the console.
 
 Fine-pointer movement tilts the console by at most 3 degrees per axis, with a 200ms ease-out transform transition; pastel papers fan on hover over 300ms. Keyboard focus flattens the console immediately. Reduced motion disables spatial movement, and touch keeps the static stack. Main controls are 44px or larger. Initial navigation and the readable hero remain server-rendered; the loading fallback is scoped to the dashboard so it cannot hide the homepage without JavaScript.
 
 ### Daylight shaders and motion control
 
-`DaylightMotion` coordinates the navigation pause/resume control and reduced-motion preference. `DaylightShader` draws original GLSL in two variants: blue/lavender flow behind the hero and blue ripple rings behind pricing. Pointer input deforms the flow; audio playback raises its energy (a playback-state effect, not live frequency analysis).
+`DaylightMotion` follows the system reduced-motion preference; the manual effects button has been removed at the user’s request. `DaylightShader` draws original GLSL in two variants: blue/lavender flow behind the hero and blue ripple rings behind pricing. Pointer input deforms the flow; audio playback raises its energy (a playback-state effect, not live frequency analysis).
 
 Each canvas caps drawing at 30fps, device pixel ratio at 1.25, and backing width at 1280px. Intersection and page visibility stop frame scheduling; paused elapsed time resumes without a jump. Reduced motion renders a single still frame. Failed WebGL compilation, unavailable WebGL, or context loss leaves the static CSS field. Buffers, shaders, observers, and event handlers are cleaned up on unmount. Device performance still needs a physical-phone check.
 
-The console floats by 12px over a six-second cycle and is surrounded by nine-second orbit lines. Hover intent, keyboard focus, pause, hidden tabs, and offscreen regions hold the float; touch/coarse-pointer mode removes it. Reduced motion removes spatial loops. Track changes use a 220ms transform/opacity transition for pointer clicks and remain immediate for keyboard activation. Release-card hover lifts by 8px over 250ms, workflow icons move by 4px over 220ms, and CTA arrows nudge by 3px over 150ms. The shared pause control never stops audio or its meaningful progress updates.
+The console floats by 12px over a six-second cycle and is surrounded by nine-second orbit lines. Hover intent, keyboard focus, reduced-motion preferences, hidden tabs, and offscreen regions hold the float; touch/coarse-pointer mode removes it. Reduced motion removes spatial loops. Track metadata follows release playback immediately. Release-card hover lifts by 8px over 250ms, workflow icons move by 4px over 220ms, and CTA arrows nudge by 3px over 150ms. System reduced-motion preferences never stop audio or its meaningful progress updates.
 
 ## Do's and Don'ts
 

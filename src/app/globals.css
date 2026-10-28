@@ -7200,33 +7200,6 @@ select {
   letter-spacing: -0.02em;
   line-height: 1.08;
 }
-.signal-selector {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  padding: 0 10px;
-}
-.signal-selector button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 44px;
-  border-radius: 9999px;
-  border: 1px solid transparent;
-  padding: 10px 17px;
-  background: transparent;
-  color: var(--muted);
-  font-size: 12px;
-  cursor: pointer;
-  transition:
-    background 150ms ease,
-    color 150ms ease;
-}
-.signal-selector button[aria-pressed='true'] {
-  background: var(--ink);
-  color: #fff;
-}
 .signal-noscript {
   font-size: 12px;
   color: var(--muted);
@@ -7245,10 +7218,6 @@ select {
   .signal-play:hover {
     background: #303743;
     transform: scale(1.04);
-  }
-  .signal-selector button:not([aria-pressed='true']):hover {
-    background: #dbeafa;
-    color: var(--text);
   }
 }
 @media (max-width: 760px) {
@@ -7298,14 +7267,6 @@ select {
   .signal-playing {
     display: none;
   }
-  .signal-selector {
-    gap: 2px;
-  }
-  .signal-selector button {
-    padding: 10px 12px;
-    gap: 6px;
-    font-size: 11px;
-  }
   .signal-waveform {
     height: 48px;
   }
@@ -7347,25 +7308,6 @@ select {
 }
 .daylight-catalog .label-pricing > div {
   position: relative;
-}
-.effects-control {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 16px;
-  min-height: 44px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 9999px;
-  font-size: 12px;
-  box-shadow: 0 6px 22px #21477512;
-  cursor: pointer;
-}
-.effects-control:disabled {
-  cursor: default;
-  opacity: 0.75;
 }
 .signal-drift {
   position: relative;
@@ -7463,14 +7405,6 @@ select {
 @media (max-width: 760px) {
   .signal-drift {
     width: calc(100% - 24px);
-  }
-  .effects-control {
-    padding: 0;
-    min-width: 44px;
-    font-size: 11px;
-  }
-  .effects-control span {
-    display: none;
   }
   .signal-stage::before,
   .signal-stage::after {

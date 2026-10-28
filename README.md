@@ -257,9 +257,9 @@ The hero uses an original React/CSS listening room with shared preview playback,
 
 ### Dynamic daylight effects
 
-The homepage includes original WebGL flow and ripple shaders, cursor distortion, and playback-state energy. The listening console floats when idle, settles on hover/focus, and animates pointer-driven track changes. Release cards, workflow icons, and CTA arrows have bounded hover feedback. The navigation pause control stops decorative effects while music remains usable.
+The homepage includes original WebGL flow and ripple shaders, cursor distortion, and playback-state energy. The listening console floats when idle, settles on hover/focus, and follows the selected demo release. Release cards, workflow icons, and CTA arrows have bounded hover feedback. The manual pause-effects control and hero track-selector buttons were removed at the user’s request. The hero follows playback selected from the release cards.
 
-Shader rendering is capped at 30fps with bounded resolution; hidden/offscreen canvases stop scheduling frames. Reduced motion uses a static shader frame and removes spatial loops. WebGL failure/context loss falls back to the static daylight field. Seven focused browser checks cover shader startup, shared pause/resume, offscreen suspension, reduced motion, WebGL failure, playback/seeking, and navigation without JavaScript. Browser checks do not certify physical-device GPU performance.
+Shader rendering is capped at 30fps with bounded resolution; hidden/offscreen canvases stop scheduling frames. Reduced motion uses a static shader frame and removes spatial loops. WebGL failure/context loss falls back to the static daylight field. Seven focused browser checks cover shader startup, absence of the removed controls, offscreen suspension, reduced motion, WebGL failure, playback/seeking, and navigation without JavaScript. Browser checks do not certify physical-device GPU performance.
 
 ### Supabase server credentials
 

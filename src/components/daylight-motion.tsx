@@ -1,14 +1,12 @@
 'use client';
 
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
-import { Pause, Play } from 'lucide-react';
 import { usePlayer } from './player';
 
-const MotionContext = createContext({ paused: false, reduced: false, toggle: () => {} });
+const MotionContext = createContext({ reduced: false });
 export const useSurfaceMotion = () => useContext(MotionContext);
 
 export function DaylightMotion({ children }: { children: React.ReactNode }) {
-  const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -34,33 +32,11 @@ export function DaylightMotion({ children }: { children: React.ReactNode }) {
     };
   }, []);
   return (
-    <MotionContext.Provider value={{ paused, reduced, toggle: () => setPaused((value) => !value) }}>
-      <div ref={root} className="daylight-motion" data-effects-paused={paused || reduced}>
+    <MotionContext.Provider value={{ reduced }}>
+      <div ref={root} className="daylight-motion" data-effects-paused={reduced}>
         {children}
       </div>
     </MotionContext.Provider>
-  );
-}
-
-export function MotionControl() {
-  const { paused, reduced, toggle } = useSurfaceMotion();
-  return (
-    <button
-      className="effects-control"
-      aria-label={
-        reduced
-          ? 'Reduced motion enabled'
-          : paused
-            ? 'Resume visual effects'
-            : 'Pause visual effects'
-      }
-      aria-pressed={!paused && !reduced}
-      disabled={reduced}
-      onClick={toggle}
-    >
-      {paused || reduced ? <Play size={14} /> : <Pause size={14} />}
-      <span>{reduced ? 'Reduced motion' : paused ? 'Resume effects' : 'Pause effects'}</span>
-    </button>
   );
 }
 
@@ -100,14 +76,13 @@ void main(){
 
 export function DaylightShader({ variant = 'flow' }: { variant?: 'flow' | 'ripple' }) {
   const canvas = useRef<HTMLCanvasElement>(null);
-  const { paused } = useSurfaceMotion();
   const { playing } = usePlayer();
-  const controls = useRef({ paused, playing });
+  const controls = useRef({ playing });
   const sync = useRef<(() => void) | null>(null);
   useEffect(() => {
-    controls.current = { paused, playing };
+    controls.current = { playing };
     sync.current?.();
-  }, [paused, playing]);
+  }, [playing]);
   useEffect(() => {
     const el = canvas.current;
     if (!el) return;
@@ -208,13 +183,11 @@ export function DaylightShader({ variant = 'flow' }: { variant?: 'flow' | 'rippl
         ? 'fallback'
         : media.matches
           ? 'reduced'
-          : controls.current.paused
-            ? 'paused'
-            : document.hidden
-              ? 'hidden'
-              : !visible
-                ? 'offscreen'
-                : 'running';
+          : document.hidden
+            ? 'hidden'
+            : !visible
+              ? 'offscreen'
+              : 'running';
       el!.dataset.renderState = state;
       if (state === 'running') frame = requestAnimationFrame(tick);
     }
@@ -227,12 +200,7 @@ export function DaylightShader({ variant = 'flow' }: { variant?: 'flow' | 'rippl
       paint();
     }
     function pointerMove(event: PointerEvent) {
-      if (
-        event.pointerType !== 'mouse' ||
-        controls.current.paused ||
-        media.matches ||
-        !matchMedia('(pointer: fine)').matches
-      )
+      if (event.pointerType !== 'mouse' || media.matches || !matchMedia('(pointer: fine)').matches)
         return;
       const box = el!.getBoundingClientRect();
       target.x = (event.clientX - box.left) / box.width;

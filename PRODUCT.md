@@ -40,3 +40,7 @@ The user supplied the Geniestudio style reference and confirmed applying it acro
 
 ## Motion steer — October 27, 2026
 The user explicitly requested more animations, shaders, and dynamism. Preserve daylight branding and the no-generated-image preference. Add code-native flow/ripple fields and stronger listening-room motion, with pause, reduced motion, bounded rendering, and dependable music controls.
+
+
+## Control simplification — October 28, 2026
+Remove the three track-selector pills below the hero console and the manual pause-effects button. Preserve playback/seeking, shaders, and automatic reduced-motion/offscreen/visibility behavior. The hero can follow the selected release from the existing release cards.

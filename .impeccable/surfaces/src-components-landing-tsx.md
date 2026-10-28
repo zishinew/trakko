@@ -78,3 +78,7 @@ The user requested researching Aceternity UI, Componentry, and 21st.dev for stro
 ## Dynamic daylight motion — October 27, 2026
 
 The user asks for more animations, shaders, and dynamism. This supersedes earlier no-shader/no-loop constraints for the homepage only. Focal moment: original cursor-reactive blue/lavender flow shader behind the listening room, plus a blue ripple shader at pricing. Continuity: actual shared playback changes shader energy and the waveform playhead; pointer track changes crossfade over220ms. Feedback: release cards lift, workflow icons move, CTA arrows nudge. Budget: WebGL draw cap30fps, DPR1.25/backingwidth1280, no offscreen/hidden scheduling; still frame under reduced motion and CSS fallback for unavailable/lost contexts. Six-second idle console float and nine-second orbit lines stop on pause/offscreen/hidden; float settles on hover/focus and is removed on coarse pointers. A single navigation control pauses effects without stopping music. Preserve all product truth and no AI-generated images.
+
+
+## Removed hero controls — October 28, 2026
+The user explicitly requested removing the three hero track-selector pills shown in their screenshot and the pause-effects button. This supersedes the manual pause/control requirements above. Remove the obsolete state and styles; retain automatic reduced motion, offscreen/hidden suspension, playback/seeking, and shaders. The hero follows the demo release selected from the existing release cards.

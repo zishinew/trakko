@@ -14,13 +14,11 @@ test('the listening room plays, seeks and switches real previews', async ({ page
   await expect
     .poll(() => page.locator('audio').evaluate((el) => (el as HTMLAudioElement).currentTime))
     .toBeGreaterThan(0);
-  await page
-    .getByRole('group', { name: 'Choose a demo track' })
-    .getByRole('button', { name: 'after hours' })
-    .click();
+  await page.getByRole('button', { name: 'Play after hours', exact: true }).click();
   await expect(
     page.getByRole('button', { name: 'Pause hero preview: after hours', exact: true }),
   ).toBeVisible();
+  await page.locator('.signal-stage').hover();
   await page.getByRole('button', { name: 'Pause hero preview: after hours', exact: true }).click();
   await page.getByRole('link', { name: 'Create your free store' }).click();
   await expect(page).toHaveURL(/\/signup$/);

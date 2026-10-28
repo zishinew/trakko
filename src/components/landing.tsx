@@ -11,7 +11,7 @@ import { Logo } from './ui';
 import { PlayerProvider } from './player';
 import { demoWorkspace } from '@/lib/demo-data';
 import { SignalDeck } from './signal-deck';
-import { DaylightMotion, DaylightShader, MotionControl } from './daylight-motion';
+import { DaylightMotion, DaylightShader } from './daylight-motion';
 import { ReleaseShowcase } from './release-showcase';
 export function Landing({ demo, feePercent }: { demo: boolean; feePercent: string }) {
   const sample = demoWorkspace();
@@ -29,7 +29,6 @@ export function Landing({ demo, feePercent }: { demo: boolean; feePercent: strin
               <Link href="/signup" className="button primary">
                 Create your store <ArrowRight size={15} />
               </Link>
-              <MotionControl />
             </nav>
           </header>
           <main>

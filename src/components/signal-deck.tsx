@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState, type PointerEvent } from 'react';
+import { useRef, type PointerEvent } from 'react';
 import { ArrowUpRight, AudioLines, Pause, Play } from 'lucide-react';
 import type { Beat } from '@/lib/types';
 import waveforms from '@/lib/demo-waveforms.json';
@@ -14,8 +14,11 @@ const clock = (time: number) =>
 // researched at Aceternity UI, Componentry and 21st.dev; no library source copied.
 export function SignalDeck({ beats }: { beats: Beat[] }) {
   const player = usePlayer();
-  const { paused, reduced } = useSurfaceMotion();
-  const [selected, setSelected] = useState(0);
+  const { reduced } = useSurfaceMotion();
+  const selected = Math.max(
+    0,
+    beats.findIndex((beat) => beat.id === player.beat?.id),
+  );
   const card = useRef<HTMLDivElement>(null);
   const track = beats[selected];
   const active = player.beat?.id === track.id;
@@ -26,7 +29,6 @@ export function SignalDeck({ beats }: { beats: Beat[] }) {
   function tilt(event: PointerEvent<HTMLDivElement>) {
     if (
       !card.current ||
-      paused ||
       reduced ||
       event.pointerType !== 'mouse' ||
       !window.matchMedia(
@@ -134,32 +136,6 @@ export function SignalDeck({ beats }: { beats: Beat[] }) {
             </div>
           </div>
         </div>
-      </div>
-      <div className="signal-selector" role="group" aria-label="Choose a demo track">
-        {beats.map((beat, index) => (
-          <button
-            key={beat.id}
-            aria-pressed={selected === index}
-            onClick={(event) => {
-              setSelected(index);
-              if (player.playing && player.beat?.id !== beat.id) player.toggle(beat);
-              if (event.detail && !paused && !reduced) {
-                requestAnimationFrame(() => {
-                  card.current?.querySelector('.signal-track-name')?.animate(
-                    [
-                      { opacity: 0.4, transform: 'translateY(5px)' },
-                      { opacity: 1, transform: 'translateY(0)' },
-                    ],
-                    { duration: 220, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' },
-                  );
-                });
-              }
-            }}
-          >
-            <AudioLines size={15} />
-            <span>{beat.title}</span>
-          </button>
-        ))}
       </div>
       <noscript>
         <p className="signal-noscript">
